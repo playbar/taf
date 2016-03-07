@@ -1,0 +1,44 @@
+module taf
+{
+    ////////////////////////////////////////////////////////////////
+    // 定义协议的版本号
+
+    const short JCEVERSION  = 0x01;
+    const short WUPVERSION  = 0x02;
+    const short WUPVERSION2 = 0x03;
+
+    ////////////////////////////////////////////////////////////////
+    // 定义消息的类型
+
+    // 普通调用
+    const byte JCENORMAL  = 0x00;
+
+    // 单向调用
+    const byte JCEONEWAY  = 0x01;
+
+    ////////////////////////////////////////////////////////////////
+    // 定义服务器端给出的异常
+
+    const int JCESERVERSUCCESS       = 0;       //服务器端处理成功
+    const int JCESERVERDECODEERR     = -1;      //服务器端解码异常
+    const int JCESERVERENCODEERR     = -2;      //服务器端编码异常
+    const int JCESERVERNOFUNCERR     = -3;      //服务器端没有该函数
+    const int JCESERVERNOSERVANTERR  = -4;      //服务器端没有该Servant对象
+    const int JCESERVERRESETGRID     = -5;      //服务器端灰度状态不一致
+    const int JCESERVERQUEUETIMEOUT  = -6;      //服务器队列超过限制
+    const int JCEASYNCCALLTIMEOUT    = -7;      //异步调用超时
+    const int JCEPROXYCONNECTERR     = -8;      //proxy链接异常
+    const int JCESERVEROVERLOAD      = -9;      //服务器端超负载,超过队列长度
+    const int JCESERVERUNKNOWNERR    = -99;     //服务器端位置异常
+
+    /////////////////////////////////////////////////////////////////
+    // 定义按位的消息状态类型,可复合
+
+    const int JCEMESSAGETYPENULL     = 0x00;    //无状态
+    const int JCEMESSAGETYPEHASH     = 0x01;    //HASH消息
+    const int JCEMESSAGETYPEGRID     = 0x02;    //灰度消息
+    const int JCEMESSAGETYPEDYED     = 0x04;    //染色消息
+    const int JCEMESSAGETYPESAMPLE   = 0x08;    //stat采样消息
+    const int JCEMESSAGETYPEASYNC    = 0x10;    //异步调用程序
+    /////////////////////////////////////////////////////////////////
+};

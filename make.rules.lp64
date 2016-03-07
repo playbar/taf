@@ -1,0 +1,121 @@
+
+#-----------------------------------------------------------------------------
+
+PLATFORM                := $(strip $(shell echo `uname -m`))
+TARGET                  := $(strip $(TARGET))
+SUFFIX                  := $(suffix $(TARGET))
+MFLAGS                  := $(strip $(MFLAGS))
+IS_LIB                  := F
+
+
+ifeq ($(SUFFIX),.a)
+    IS_LIB              := T
+endif
+
+ifeq ($(SUFFIX),.so)
+    IS_LIB              := T
+endif
+
+
+ifneq ($(MFLAGS),all) 
+ifneq ($(MFLAGS),64) 
+ifneq ($(MFLAGS),32) 
+ifeq ($(PLATFORM),x86_64)
+	ifeq ($(IS_LIB),T)
+		MFLAGS          := 64
+	else
+        	MFLAGS          := 64
+	endif
+else
+        MFLAGS          := 64
+endif
+endif
+endif
+endif
+
+
+#ifeq ($(IS_LIB),T)
+#ifeq ($(PLATFORM),x86_64)
+#        MFLAGS          := 64
+#endif
+#endif
+
+ifeq ($(MFLAGS),all)
+ifneq ($(PLATFORM),x86_64) 
+        MFLAGS          := 64
+endif
+endif
+
+
+ifeq ($(IS_LIB),T)
+        TARGET_64      := $(TAFLIB_PATH_64)$(TARGET)
+        TARGET_64      := $(TAFLIB_PATH_64)$(TARGET)
+        TARGET         := $(TAFLIB_PATH_$(MFLAGS))$(TARGET)
+else
+        TARGET_64      :=$(TARGET).64
+        TARGET_64      :=$(TARGET).64
+endif
+
+#-----------------------------------------------------------------------------
+
+ifneq ($(PLATFORM),x86_64)
+        MFLAGS  := 32
+        LIB     := $(LIB) $(LIB_32)
+        ifeq ($(IS_LIB),T)
+        TARGET  := $(TARGET_32)
+        endif
+else
+
+#-----------------------------------------------------------------------------
+
+DEP_FILE_32     := $(foreach obj, $(DEP_FILE),$(patsubst %.d,%.32.d, $(obj))) 
+DEP_FILE_64     := $(foreach obj, $(DEP_FILE),$(patsubst %.d,%.64.d, $(obj)))
+
+JCE_OBJ_32      := $(foreach obj, $(JCE_OBJ),$(patsubst %.o,%.32.o, $(obj)))
+JCE_OBJ_64      := $(foreach obj, $(JCE_OBJ),$(patsubst %.o,%.64.o, $(obj)))
+
+HCE_OBJ_32      := $(foreach obj, $(JCE_OBJ),$(patsubst %.o,%.32.o, $(obj)))
+HCE_OBJ_64      := $(foreach obj, $(HCE_OBJ),$(patsubst %.o,%.64.o, $(obj)))
+
+REMOTE_OBJ_32   := $(foreach obj, $(REMOTE_OBJ),$(patsubst %.o,%.32.o,$(obj)))
+REMOTE_OBJ_64   := $(foreach obj, $(REMOTE_OBJ),$(patsubst %.o,%.64.o,$(obj)))
+
+LOCAL_OBJ_32    := $(foreach obj, $(LOCAL_OBJ),$(patsubst %.o,%.32.o,$(obj)))
+LOCAL_OBJ_64    := $(foreach obj, $(LOCAL_OBJ),$(patsubst %.o,%.64.o,$(obj)))
+
+LIB_32          := $(LIB) $(LIB_32)  
+LIB_64          := $(LIB) $(LIB_64) 
+
+CLEANFILE       := $(LOCAL_OBJ_32) $(LOCAL_OBJ_64)  
+
+ifeq ($(MFLAGS),all)
+    TARGET      := $(TARGET_32) $(TARGET_64)
+    DEP_FILE    := $(DEP_FILE_32) $(DEP_FILE_64)
+    JCE_OBJ     := $(JCE_OBJ_32) $(JCE_OBJ_64)
+    HCE_OBJ     := $(HCE_OBJ_32) $(HCE_OBJ_64)
+    LOCAL_OBJ   := $(LOCAL_OBJ_32) $(LOCAL_OBJ_64)
+else
+ifeq ($(MFLAGS),64)
+    DEP_FILE    := $(DEP_FILE_64)
+    JCE_OBJ     := $(JCE_OBJ_64)
+    HCE_OBJ     := $(HCE_OBJ_64)
+    LOCAL_OBJ   := $(LOCAL_OBJ_64) 
+    REMOTE_OBJ  := $(REMOTE_OBJ_64)
+    LIB         := $(LIB_64)
+else
+ifeq ($(MFLAGS),32)
+    DEP_FILE    := $(DEP_FILE_32)
+    JCE_OBJ     := $(JCE_OBJ_32)
+    HCE_OBJ     := $(HCE_OBJ_32)
+    LOCAL_OBJ   := $(LOCAL_OBJ_32)
+    REMOTE_OBJ  := $(REMOTE_OBJ_32)
+    LIB         := $(LIB_32)
+endif
+endif
+endif
+
+
+#-----------------------------------------------------------------------------
+
+endif
+#-------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+module taf
+{
+    struct ServerInfo
+    {
+        0 require string application;
+        1 require string serverName;
+        2 require int pid;
+        3 optional string adapter;
+    };
+
+    interface ServerF
+    {
+        /**
+        * 向node定时上报serverInfo
+        * @param serverInfo  服务状态
+        * @return  int 
+        */      
+        int keepAlive(ServerInfo serverInfo);
+        
+        /**
+        * 向node上报TAF版本信息
+        * @param string  版本信息
+        * @return  int 
+        */      
+        int reportVersion(string app,string serverName,string version);
+    };
+};

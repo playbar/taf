@@ -1,0 +1,1 @@
+java -classpath .:/usr/local/taf-version/taf-1.5.7/bin Hessian2hce $*

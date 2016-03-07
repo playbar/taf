@@ -1,0 +1,58 @@
+<taf>
+  <application>
+    
+    #proxy需要的配置
+    <client>
+        #地址 tcp -h 127.0.0.1 -p 30000
+        locator                     = taf.tafregistry.QueryObj@tcp -h 127.0.0.1 -p 17890
+        #最大超时时间(毫秒)
+        max-invoke-timeout          = 3000
+        #刷新端口时间间隔(毫秒)
+        refresh-endpoint-interval   = 10000
+        #模块间调用
+        stat                        = taf.tafstat.StatObj
+        #属性上报服务
+        property                    = taf.tafproperty.PropertyObj
+        #上报间隔时间(秒)
+        report-interval             = 60
+        #网络发送线程个数
+        sendthread                  = 1
+        #网络接收线程个数
+        recvthread                  = 1
+        #网络异步回调线程个数
+        asyncthread                 = 3
+        #模块名称
+        modulename                  = ${modulename}
+    </client>
+    
+    #定义所有绑定的IP
+    <server>
+        #应用名称
+        app      = ${app}
+        #服务名称
+        server   = ${server}
+        #本地ip地址
+        localip  = ${localip}
+        #服务可执行文件,配置文件目录
+        basepath = ${basepath}
+        #服务的数据目录
+	datapath = ${datapath}
+        #日志路径
+        logpath  = ${logpath}
+        #日志大小
+        logsize  = 50M
+        #日志个数
+        lognum   = 10
+        #网络线程个数
+        netthread = 2
+        #本地管理套接字[可选]
+        local  = ${local}
+        #配置中心的地址[可选]
+        config  = taf.tafconfig.ConfigObj
+        #通知信息中心的地址[可选]
+        notify  = taf.tafnotify.NotifyObj
+        #远程LogServer[可选]
+        log     = taf.taflog.LogObj
+    </server>            
+  </application>
+</taf>

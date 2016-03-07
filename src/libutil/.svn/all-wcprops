@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil
+END
+tc_thread_cond.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_thread_cond.cpp
+END
+tc_http_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_http_async.cpp
+END
+tc_ex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_ex.cpp
+END
+tc_parsepara.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_parsepara.cpp
+END
+tc_pack.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_pack.cpp
+END
+tc_logger.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_logger.cpp
+END
+tc_http.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_http.cpp
+END
+tc_mem_queue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_mem_queue.cpp
+END
+tc_md5.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_md5.cpp
+END
+tc_hashmap_compact.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_hashmap_compact.cpp
+END
+tc_shm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_shm.cpp
+END
+tc_thread_mutex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_thread_mutex.cpp
+END
+tc_thread_pool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_thread_pool.cpp
+END
+tc_epoll_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_epoll_server.cpp
+END
+tc_file_mutex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_file_mutex.cpp
+END
+tc_cgi.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_cgi.cpp
+END
+tc_epoller.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_epoller.cpp
+END
+tc_sem_mutex.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_sem_mutex.cpp
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/.cvsignore
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/Makefile
+END
+tc_thread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_thread.cpp
+END
+tc_option.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_option.cpp
+END
+tc_timeprovider.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_timeprovider.cpp
+END
+tc_des.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_des.cpp
+END
+tc_bitmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_bitmap.cpp
+END
+tc_encoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_encoder.cpp
+END
+tc_file.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_file.cpp
+END
+tc_dyn_object.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_dyn_object.cpp
+END
+tc_hashmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_hashmap.cpp
+END
+tc_rbtree.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_rbtree.cpp
+END
+tc_base64.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_base64.cpp
+END
+tc_clientsocket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_clientsocket.cpp
+END
+tc_common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_common.cpp
+END
+tc_socket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_socket.cpp
+END
+tc_mmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_mmap.cpp
+END
+tc_multi_hashmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_multi_hashmap.cpp
+END
+tc_mysql.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_mysql.cpp
+END
+tc_config.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_config.cpp
+END
+tc_mem_chunk.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libutil/tc_mem_chunk.cpp
+END

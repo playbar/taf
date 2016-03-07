@@ -1,0 +1,32 @@
+<one>
+  <application>
+	
+    #proxy需要的配置
+    <client>
+        #地址
+        locator                     = one.oneregistry.QueryObj@tcp -h 127.0.0.1 -p 17890:tcp -h 127.0.0.1 -p 30000
+
+        #最大超时时间(毫秒)
+        max-invoke-timeout          = 30000
+
+        #刷新端口时间间隔(毫秒)
+        refresh-endpoint-interval   = 60000
+
+        #模块间调用[可选]
+        stat                        = one.onestat.StatObj
+
+        #网络发送线程个数
+        sendthread                  = 3
+
+        #网络接收线程个数
+        recvthread                  = 3
+
+        #网络异步回调线程个数
+        asyncthread                 = 3
+
+        #模块名称
+        modulename                  = one.onetest
+    </client>
+            
+  </application>
+</one>

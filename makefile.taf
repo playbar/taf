@@ -1,0 +1,267 @@
+
+#-------------------------------------------------------------------------------
+
+export LC_ALL   = zh_CN.GB2312
+export LANG     = zh_CN.GB2312
+
+#-------------------------------------------------------------------------------
+
+CC          = gcc
+CXX         = g++
+CFLAGS      += -g -Wno-deprecated -Wall
+#-pg
+
+#-------------------------------------------------------------------------------
+
+JCE2CPP     := ${TAF_PATH}/bin/jce2cpp ${J2CPP_FLAG}
+HCE2CPP     := ${TAF_PATH}/bin/hce2cpp
+
+#-------------------------------------------------------------------------------
+
+JCE_SRC     := $(wildcard *.jce)
+JCE_H       := $(patsubst %.jce,%.h, $(JCE_SRC))
+JCE_INTER   := $(if $(JCE_SRC), $(shell grep -ls interface $(JCE_SRC)))
+JCE_CPP     := $(patsubst %.jce,%.cpp, $(JCE_INTER))
+JCE_OBJ     := $(patsubst %.jce,%.o, $(JCE_INTER))
+
+HCE_SRC     := $(wildcard *.hce)
+HCE_H       := $(patsubst %.hce,%.h, $(HCE_SRC))
+HCE_CPP     := $(patsubst %.hce,%.cpp, $(HCE_SRC))
+HCE_OBJ     := $(patsubst %.hce,%.o, $(HCE_SRC))
+
+LOCAL_SRC   += $(sort $(wildcard *.cpp *.c) $(JCE_CPP) $(HCE_CPP))
+
+LOCAL_OBJ   += $(patsubst %.cpp,%.o, $(patsubst %.c,%.o, $(LOCAL_SRC)))
+DEP_FILE    := $(foreach obj, $(LOCAL_OBJ), $(dir $(obj)).$(basename $(notdir $(obj))).d)
+
+#-------------------------------------------------------------------------------
+
+INCLUDE     += -I${TAF_PATH}/include -I./ -I/usr/local/mysql/include/mysql
+#LIB         += -L${TAF_PATH}/lib -lpthread -ltaf -lutil ${LIB_DIR}
+LIB_32       += -L${TAF_PATH}/lib32 -lpthread -ltaf -lutil ${LIB_DIR}
+LIB_64       += -L${TAF_PATH}/lib64 -lpthread -ltaf -lutil ${LIB_DIR}
+
+#----------------------------------------------------------------------------------
+
+copyfile = if test -z "$(APP)" || test -z "$(TARGET)"; then \
+               echo "['APP' or 'TARGET' option is empty.]"; exit 1; \
+           elif test ! -d $(2); then \
+               echo "[No such dir:$(2)]"; exit 1;\
+           else \
+               echo "[Copy file $(1) -> $(2)]"; \
+               cp -v $(1) $(2); \
+           fi;
+
+#-----------------------------------------------------------------------------
+
+include ${TAF_PATH}/make.rules.lp64
+
+#-------------------------------------------------------------------------------
+
+all : $(JCE_H) $(JCE_CPP) $(LOCAL_OBJ) $(TARGET) $(TARGETS) FORSTRIP
+
+#-------------------------------------------------------------------------------
+ifeq ($(MFLAGS),all)
+
+$(filter %.a,$(TARGET_32)) : $(LOCAL_OBJ_32) $(REMOTE_OBJ_32)
+	ar r $@ $(LOCAL_OBJ_32)
+$(filter %.a,$(TARGET_64)) : $(LOCAL_OBJ_64) $(REMOTE_OBJ_64)
+	ar r $@ $(LOCAL_OBJ_64)
+
+$(filter %.so,$(TARGET_32)) : $(LOCAL_OBJ_32) $(REMOTE_OBJ_32)
+	$(CC) -m32 $(LFLAGS) -shared -o $@ $(LOCAL_OBJ_32) $(LIB_32)
+$(filter %.so,$(TARGET_64)) : $(LOCAL_OBJ_64) $(REMOTE_OBJ_64)
+	$(CC) -m64 $(LFLAGS) -shared -o $@ $(LOCAL_OBJ_64) $(LIB_64)
+
+$(filter-out %.so %.a,$(TARGET_32)) : $(LOCAL_OBJ_32) $(REMOTE_OBJ_32)
+	$(CXX) -m32 $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB_32)
+$(filter-out %.so %.a,$(TARGET_64)) : $(LOCAL_OBJ_64) $(REMOTE_OBJ_64)
+	$(CXX) -m64 $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB_64)
+
+$(filter-out %.so %.a %.y,$(TARGETS_32)) : % : %.$(MFLAGS).o
+	$(CXX) -m32 $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB_32)
+$(filter-out %.so %.a %.y,$(TARGETS_64)) : % : %.$(MFLAGS).o
+	$(CXX) -m64 $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB_64)
+    
+FORSTRIP:$(TARGET_32) $(TARGETS_64)
+ifeq ($(STRIP_FLAG),Y)
+	@strip $(TARGET_32) $(TARGETS_64)
+endif
+
+else
+
+$(filter %.a,$(TARGET)) : $(LOCAL_OBJ) $(REMOTE_OBJ)
+	ar r $@ $(LOCAL_OBJ)
+
+$(filter %.so,$(TARGET)) : $(LOCAL_OBJ) $(REMOTE_OBJ)
+	$(CC) -m$(MFLAGS) $(LFLAGS) -shared -o $@ $(LOCAL_OBJ) $(LIB)
+
+$(filter-out %.so %.a,$(TARGET)) : $(LOCAL_OBJ) $(REMOTE_OBJ)
+	$(CXX) -m$(MFLAGS) $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB)
+
+$(filter-out %.so %.a %.y,$(TARGETS)) : % : %.$(MFLAGS).o
+	$(CXX) -m$(MFLAGS) $(CFLAGS) -o $@ $^ $(INCLUDE) $(LIB)
+
+FORSTRIP:$(TARGET) $(TARGETS)
+ifeq ($(STRIP_FLAG),Y)
+	@strip $(TARGET) $(TARGETS)
+endif
+
+endif
+
+#----------------------------------------------------------------------------------
+
+copyfile = if test -z "$(APP)" || test -z "$(TARGET)"; then \
+               echo "['APP' or 'TARGET' option is empty.]"; exit 1; \
+           elif test ! -d $(2); then \
+               echo "[No such dir:$(2)]"; exit 1;\
+           else \
+               echo "[Copy file $(1) -> $(2)]"; \
+               cp -v $(1) $(2); \
+		   fi;
+#----------------------------------------------------------------------------------
+
+ifneq ($(JCE_SRC),)
+$(JCE_H) $(JCE_CPP) : $(JCE_SRC)
+	rm -vf $(JCE_H) $(JCE_CPP) $(JCE_OBJ)
+	$(JCE2CPP) $(JCE_SRC)
+
+endif
+#----------------------------------------------------------------------------------
+
+ifneq ($(HCE_SRC),)
+$(HCE_H) $(HCE_CPP) : $(HCE_SRC)
+	rm -vf $(HCE_H) $(HCE_CPP) $(HCE_OBJ)
+	$(HCE2CPP) $(HCE_SRC)
+
+endif
+
+tar: $(TARGET) $(CONFIG)
+	@if [ -d $(TARGET)_tmp_dir ]; then \
+		echo "dir has exist:$(TARGET)_tmp_dir, abort."; \
+		exit 1; \
+	else \
+		mkdir $(TARGET)_tmp_dir $(TARGET)_tmp_dir/$(TARGET);\
+		cp $(TARGET) $(CONFIG) $(TARGET)_tmp_dir/$(TARGET)/; \
+		cd $(TARGET)_tmp_dir; tar cvfz $(TARGET).tgz $(TARGET)/; cd ..; \
+		if [ -f "$(TARGET).tgz" ]; then \
+			mv -vf $(TARGET).tgz $(TARGET).`date +%Y%m%d%H%M%S`.tgz; \
+		fi; \
+		mv $(TARGET)_tmp_dir/$(TARGET).tgz ./; \
+		rm -rf $(TARGET)_tmp_dir; \
+		echo "tar cvfz $(TARGET).tgz ..."; \
+	fi
+
+upload: tar
+	@echo "$(TARGET).tgz --- $(APP).$(TARGET).tgz"
+	@myscp $(TARGET).tgz mqq@172.27.34.213:/usr/local/app/patch2test/$(APP).$(TARGET).tgz mqq2005
+	@wget -O /tmp/$(APP).$(TARGET).wget.out "http://172.27.34.213:8080/pages/taf_server/doUpload.xjsp?SERVER=$(APP).$(TARGET)&TGZ=/usr/local/app/patch2test/$(APP).$(TARGET).tgz"
+	@cat /tmp/$(APP).$(TARGET).wget.out
+
+upload2test: tar
+	@echo "$(TARGET).tgz --- $(APP).$(TARGET).tgz"
+	@myscp $(TARGET).tgz mqq@172.27.194.147:/usr/local/app/patch2test/$(APP).$(TARGET).tgz mqq2005
+	@wget -O /tmp/$(APP).$(TARGET).wget.out "http://172.27.194.147:8080/pages/taf_server/doUpload.xjsp?SERVER=$(APP).$(TARGET)&TGZ=/usr/local/app/patch2test/$(APP).$(TARGET).tgz"
+	@cat /tmp/$(APP).$(TARGET).wget.out
+
+HELP += $(HELP_TAR)
+
+ifneq ($(JCE_SRC),)
+
+ifeq ($(PLATFORM),x86_64)
+JCE_OBJ		:= $(JCE_OBJ_32) $(JCE_OBJ_64)
+endif
+
+SERVER_NAME := $(TARGET)
+SERVER_DIR  := /home/tafjce/$(APP)/$(SERVER_NAME)
+SERVER_OBJ  := $(foreach file, $(JCE_OBJ),$(SERVER_DIR)/$(basename $(file)).o)
+SERVER_OBJ	:= $(patsubst %.32.o,%.o,$(patsubst %.64.o,%.o, $(SERVER_OBJ)))
+SERVER_OBJ	:= $(sort $(SERVER_OBJ))
+RELEASE_JCE += $(JCE_SRC) $(JCE_H)
+
+release: $(JCE_OBJ) $(JCE_H)
+	@$(call copyfile, $(RELEASE_JCE) $(JCE_OBJ) [Mm]akefile , $(SERVER_DIR))
+	echo "INCLUDE += -I$(SERVER_DIR)"  >  $(SERVER_DIR)/$(SERVER_NAME).mk;
+	echo "REMOTE_OBJ += $(SERVER_OBJ)" >> $(SERVER_DIR)/$(SERVER_NAME).mk;
+
+HELP += $(HELP_RELEASE)
+endif
+#----------------------------------------------------------------------------------
+
+clean:
+	rm -vf $(LOCAL_OBJ) $(TARGET) $(TARGETS) ${CLEANFILE} .*.d.tmp gmon.out
+
+cleanall:
+	rm -vf $(LOCAL_OBJ) $(JCE_H) $(JCE_CPP) $(HCE_H) $(HCE_CPP) $(TARGET) $(TARGETS) $(DEP_FILE) ${CLEANFILE} *.o .*.d.tmp .*.d gmon.out
+
+HELP += $(HELP_CLEAN)
+HELP += $(HELP_CLEANALL)
+
+ifneq ($(DEP_FILE),)
+-include $(DEP_FILE)
+endif
+
+HELP_RELEASE  = "\n\e[1;33mrelease\e[0m:\t[copy '\e[1;32m$(ICE_SRC) $(ICE_H) $(ICE_OBJ)\e[0m' -> '/home/tafjce/$(APP)/$(TARGET)']"
+HELP_CLEAN    = "\n\e[1;33mclean\e[0m:\t\t[remove $(LOCAL_OBJ) $(TARGET)]"
+HELP_CLEANALL = "\n\e[1;33mcleanall\e[0m:\t[clean & rm .*.d]"
+HELP_TAR      = "\n\e[1;33mtar\e[0m:\t\t[will do 'tar $(TARGET).tgz $(RELEASE_FILE)']"
+
+help:
+	@echo -e $(HELP)"\n"
+
+#-------------------------------------------------------------------------------
+
+.%.32.d: %.cpp
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.cpp/\.32.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.32.o: %.cpp
+	$(CXX) -m32 $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+.%.32.d: %.c
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.c/\.32.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.32.o: %.c
+	$(CC) -m32 $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+#-------------------------------------------------------------------------------
+
+.%.64.d: %.cpp
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.cpp/\.64.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.64.o: %.cpp
+	$(CXX) -m64 $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+.%.64.d: %.c
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.c/\.64.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.64.o: %.c
+	$(CC) -m64 $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+#----------------------------------------------------------------------------------
+
+.%.d: %.cpp
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.cpp/\.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.o: %.cpp
+	$(CXX) -m$(MFLAGS) $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+.%.d: %.c
+	@echo "update $@ ..."; \
+	echo -n $< | sed s/\.c/\.o:/ > $@; \
+	$(CC) $(INCLUDE) -MM $< | sed '1s/.*.://' >> $@;
+
+%.o: %.c
+	$(CC) -m$(MFLAGS) $(CFLAGS) $(INCLUDE) -o $@ -c $<
+
+#----------------------------------------------------------------------------------
+

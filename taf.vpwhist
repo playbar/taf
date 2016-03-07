@@ -1,0 +1,172 @@
+[Global]
+CurrentProject=V:\MTT\MTT.vpj
+[ActiveConfig]
+taf.vpj=Release
+\TafComm\TafComm.vpj=Release
+X:\MQQGameTerminalServer_proj\trunk\MQQGameTerminalServer_proj.vpj=Release
+\rbtree\rbtree.vpj=Release
+W:\MTT\MTT.vpj=Release
+V:\MTT\MTT.vpj=Release
+[ProjectDates]
+W:\MTT\MTT.vpj=20091221150906000
+taf.vpj=20091222095144000
+V:\MTT\MTT.vpj=20091221150906000
+[TreeExpansion2]
+- W:\MTT\MTT.vpj
+  - TemplateServer
++ taf.vpj
+  + bin
+  + conf
+  + doc
+  + include
+    + config
+    + hessian
+    + jce
+      + demo
+    + jmem
+    + log
+    + nodeF
+    + notify
+    + parse
+    + patch
+    + servant
+    + util
+  + java
+    + hessian2hce
+    + jce
+      + src
+  + jce
+    + config
+    + log
+    + node
+    + nodeF
+    + notify
+    + patch
+    + registry
+    + servant
+    + stat
+  + lib
+  + script
+    + demo
+    + HelloServer
+      + client4c++
+      + src
+      + srcB
+    + install_taf
+      + taf
+        + tafadmin
+          + conf
+        + tafnode
+          + conf
+        + tafregistry
+          + conf
+    + taf
+      + tafadmin
+        + conf
+      + tafnode
+        + conf
+      + tafregistry
+        + conf
+  - src
+    + adminclient
+    + config
+    + hce2cpp
+    + jce2c
+    + jce2cpp
+    + jce2java
+    + jce2symcpp
+    + libconfig
+    + libhessian
+    + liblog
+    + libnodeF
+      + libhessian
+    + libnotify
+    + libparse
+    + libpatch
+    + libservant
+    + libutil
+    + log
+    + node
+    - notify
+    + patch
+    + patchclient
+    + property
+    + registry
+    + stat
+    + xmlproxy
+  + test
+    + admin
+    + AServer
+    + BServer
+    + client
+    + coder
+    + config
+    + hce2cpp
+    + HelloServer
+      + client
+      + src
+      + transfer
+      + wup_client
+    + hessian
+    + jce2cpp
+    + jce2java
+    + jmem
+    + log
+    + node
+    + notify
+    + ping
+    + property
+    + registry
+    + simple
+    + stat
+    + TCServer
+      + client
+    + TestClient
+    + TestServer
+    + util
+    + wup
+    + xmlproxy
+scroll:0
+[State]
+SCREEN: 1280 1024 367 38 1259 685 0 0 M 0 0 0 0 1253 825
+CWD: W:\MTT
+BUFFER: BN="W:\MTT\TemplateServer\makefile"
+BI: MA=1 74 1  TABS=1 9  WWS=1 IWT=1 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Makefile	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=8 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\TemplateServer.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=9 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\notify\NotifyServer.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.348 CL=32 LE=0 CX=32 CY=12 WI=5 BI=10 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\notify\NotifyImp.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.216 CL=1 LE=0 CX=1 CY=9 WI=5 BI=11 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\TemplateServer.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.386 CL=1 LE=0 CX=1 CY=19 WI=5 BI=12 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\TemplateServer.conf"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Config	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.189 CL=1 LE=0 CX=1 CY=10 WI=5 BI=13 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\Template.jce"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=1 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Fundamental	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.757 CL=1 LE=0 CX=1 CY=30 WI=5 BI=14 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\TemplateImp.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.1368 CL=46 LE=0 CX=46 CY=39 WI=5 BI=15 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="W:\MTT\TemplateServer\TemplateImp.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C	HM=0 MF=40 TL=0 MLL=0 ASE=0 LNL=6 LCF=2 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.2658 CL=88 LE=0 CX=88 CY=26 WI=5 BI=16 HT=0 HN=0 HF=0 HC=4
+WINDOW: 22 29 1055 564 -1 -1 M  WF=0 WT=1 "Fixedsys,10,0,1"
+BUFFER: BN="W:\MTT\TemplateServer\TemplateImp.cpp"
+VIEW: LN=.337 CL=2 LE=0 CX=9 CY=14 WI=72 BI=16 HT=0 HN=0 HF=0 HC=4
+FILEHIST: 9
+W:\MTT\TemplateServer\TemplateServer.h
+W:\MTT\TemplateServer\TemplateServer.cpp
+src\notify\NotifyImp.cpp
+src\notify\NotifyServer.cpp
+src\notify\main.cpp
+W:\MTT\TemplateServer\TemplateServer.conf
+W:\MTT\TemplateServer\Template.jce
+W:\MTT\TemplateServer\TemplateImp.h
+W:\MTT\TemplateServer\TemplateImp.cpp

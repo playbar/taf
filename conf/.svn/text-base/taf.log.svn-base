@@ -1,0 +1,8 @@
+<taf>
+    <log>
+        #log文件目录
+        logpath   = /usr/local/app/taf/app_log
+	#log写线程数
+        logthread = 20
+    </log>  
+</taf>

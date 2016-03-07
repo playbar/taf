@@ -1,0 +1,68 @@
+#include  "../servant/StatF.jce"
+module taf
+{
+
+struct StatQueryKey
+{
+      0 require string name;    //模块name 一般为app+servername 例如：Comm.BindServer
+      1 require string ip;      //ip   
+      2 require int page;
+};
+
+
+key[StatQueryKey,name,ip,page];
+   
+
+struct StatQueryData
+{
+      0 require int curTime;                    //当前时间
+      1 require StatMicMsgHead head;           //模块间调用信息头
+      2 require StatMicMsgBody body;           //模块间调用信息体
+};
+
+
+struct StatQueryValue
+{
+       0 require int nextpage;
+       1 require vector<StatQueryData> dataList;
+};
+
+
+struct Db
+{
+       0 require string sModule;
+       1 require string sIp;
+       2 require string sDbName;
+       3 require string sTbName;
+       4 require string sUser;
+       5 require string sPass;
+       6 require string sPort;         
+};
+
+
+/**
+ *
+ * 查询的接口
+ *
+ **/
+interface StatQuery
+{
+      /**
+      * 获取接口实时上报信息
+      * @param tKey, 查询条件
+      * @param bMaster, true 作为主调查询。false 作为被调查询
+      * @param tValue, 返回数据
+      * @return int, 返回0表示成功
+      */
+      int query(StatQueryKey tKey,bool bMaster,out StatQueryValue tValue);
+
+      /**
+      * 获取模块数据存储db信息
+      * @param string, 查询模块名
+      * @param DbInf, db信息
+      * @return int, 返回0表示成功
+      */
+      int queryDbInf(string sModule,out Db tDb);
+};
+
+}; 

@@ -1,0 +1,44 @@
+module taf
+{
+    /**
+     * config obj to load server's system config.
+     **/
+    interface Config
+    {
+        /**
+         * 读取配置文件列表
+         * @param app, app name
+         * @param server, server name
+         * @param vf, config file name
+         **/
+        int ListConfig(string app, string server, out vector<string> vf);
+
+        /**
+         * 读取配置文件
+         * @param app, app name
+         * @param server, server name
+         * @param filename, config file name
+         **/
+        int loadConfig(string app, string server, string filename, out string config);
+
+        /**
+         * 根据host读取文件
+         * @param appSerever, app.server
+         * @param filename, config file name
+         * @param host, ip
+         * @param config, 配置文件内容
+         **/
+        int loadConfigByHost(string appServerName, string filename, string host, out string config);
+
+        /**
+         * 检查配置文件是否服务TC_Config格式
+         * @param appSerever, app.server
+         * @param filename, config file name
+         * @param host, ip
+         * @param result, 提示
+         * @return int 0: 合法, -1:非法
+         **/
+        int checkConfig(string appServerName, string filename, string host, out string result);
+    };
+};
+

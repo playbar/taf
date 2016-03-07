@@ -1,0 +1,10 @@
+module Test
+{
+    interface Hello
+    {
+        int testHello(string s, out string r);
+
+        int testHelloSlow(string s, out string r);
+        int testHelloFast(string s, out string r);
+    };
+};

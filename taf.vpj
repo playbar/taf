@@ -1,0 +1,1188 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Release"
+		OutputFile=""
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='"taf.exe"'/>
+			</Target>
+		</Menu>
+	</Config>
+	<CustomFolders>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+		</Folder>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if">
+		</Folder>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters="">
+		</Folder>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="bin">
+			<F
+				N="bin/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="conf">
+			<F N="conf/admin.config.conf"/>
+			<F
+				N="conf/Makefile"
+				Type="Makefile"/>
+			<F N="conf/node.config.conf"/>
+			<F N="conf/registry.config.conf"/>
+		</Folder>
+		<Folder Name="doc">
+			<F
+				N="doc/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="include">
+			<Folder Name="config">
+				<F N="include/config/Config.h"/>
+				<F
+					N="include/config/Makefile"
+					Type="Makefile"/>
+				<F N="include/config/taf_config.h"/>
+			</Folder>
+			<Folder Name="hessian">
+				<F N="include/hessian/HessianInput.h"/>
+				<F N="include/hessian/HessianOutput.h"/>
+				<F N="include/hessian/HessianProxy.h"/>
+				<F N="include/hessian/HessianStringStream.h"/>
+				<F N="include/hessian/HessianWrappers.h"/>
+				<F
+					N="include/hessian/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce">
+				<Folder Name="demo">
+					<F N="include/jce/demo/main.cpp"/>
+					<F
+						N="include/jce/demo/Makefile"
+						Type="Makefile"/>
+					<F N="include/jce/demo/UserInfo.h"/>
+					<F N="include/jce/demo/UserInfo.jce"/>
+				</Folder>
+				<F N="include/jce/Jce.h"/>
+				<F N="include/jce/Jce_c.h"/>
+				<F N="include/jce/Jce_sym.h"/>
+				<F N="include/jce/JceDisplayer.h"/>
+				<F N="include/jce/JceType.h"/>
+				<F
+					N="include/jce/Makefile"
+					Type="Makefile"/>
+				<F N="include/jce/RequestF.h"/>
+				<F N="include/jce/RequestF.jce"/>
+				<F N="include/jce/RequestF_sym.h"/>
+				<F N="include/jce/wup.h"/>
+				<F N="include/jce/wup_c.h"/>
+				<F N="include/jce/wup_sym.h"/>
+			</Folder>
+			<Folder Name="jmem">
+				<F N="include/jmem/jmem_hashmap.h"/>
+				<F N="include/jmem/jmem_hashmap_compact.h"/>
+				<F N="include/jmem/jmem_multi_hashmap.h"/>
+				<F N="include/jmem/jmem_policy.h"/>
+				<F N="include/jmem/jmem_queue.h"/>
+				<F N="include/jmem/jmem_rbtree.h"/>
+				<F
+					N="include/jmem/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="include/log/Log.h"/>
+				<F
+					N="include/log/Makefile"
+					Type="Makefile"/>
+				<F N="include/log/taf_logger.h"/>
+			</Folder>
+			<Folder Name="nodeF">
+				<F
+					N="include/nodeF/Makefile"
+					Type="Makefile"/>
+				<F N="include/nodeF/NodeF.h"/>
+				<F N="include/nodeF/taf_nodeF.h"/>
+			</Folder>
+			<Folder Name="notify">
+				<F
+					N="include/notify/Makefile"
+					Type="Makefile"/>
+				<F N="include/notify/Notify.h"/>
+				<F N="include/notify/taf_notify.h"/>
+			</Folder>
+			<Folder Name="parse">
+				<F N="include/parse/element.h"/>
+				<F
+					N="include/parse/Makefile"
+					Type="Makefile"/>
+				<F N="include/parse/parse.h"/>
+			</Folder>
+			<Folder Name="patch">
+				<F
+					N="include/patch/Makefile"
+					Type="Makefile"/>
+				<F N="include/patch/Patch.h"/>
+				<F N="include/patch/taf_patch.h"/>
+			</Folder>
+			<Folder Name="servant">
+				<F N="include/servant/AdapterProxy.h"/>
+				<F N="include/servant/AdminF.h"/>
+				<F N="include/servant/AdminServant.h"/>
+				<F N="include/servant/AppCache.h"/>
+				<F N="include/servant/Application.h"/>
+				<F N="include/servant/AppProtocol.h"/>
+				<F N="include/servant/AsyncProcThread.h"/>
+				<F N="include/servant/BaseF.h"/>
+				<F N="include/servant/BaseNotify.h"/>
+				<F N="include/servant/BaseProxy.h"/>
+				<F N="include/servant/Communicator.h"/>
+				<F N="include/servant/CommunicatorFactory.h"/>
+				<F N="include/servant/Connector.h"/>
+				<F N="include/servant/EndpointF.h"/>
+				<F N="include/servant/EndpointInfo.h"/>
+				<F N="include/servant/FDReactor.h"/>
+				<F N="include/servant/Global.h"/>
+				<F N="include/servant/JceCurrent.h"/>
+				<F
+					N="include/servant/Makefile"
+					Type="Makefile"/>
+				<F N="include/servant/Message.h"/>
+				<F N="include/servant/NetworkUtil.h"/>
+				<F N="include/servant/NotifyObserver.h"/>
+				<F N="include/servant/ObjectProxy.h"/>
+				<F N="include/servant/ObjectProxyFactory.h"/>
+				<F N="include/servant/PropertyF.h"/>
+				<F N="include/servant/PropertyReport.h"/>
+				<F N="include/servant/QueryEndpoint.h"/>
+				<F N="include/servant/QueryF.h"/>
+				<F N="include/servant/Servant.h"/>
+				<F N="include/servant/ServantHandle.h"/>
+				<F N="include/servant/ServantHelper.h"/>
+				<F N="include/servant/ServantProxy.h"/>
+				<F N="include/servant/ServantProxyFactory.h"/>
+				<F N="include/servant/StatF.h"/>
+				<F N="include/servant/StatReport.h"/>
+				<F N="include/servant/TimeoutHandle.h"/>
+				<F N="include/servant/TMEventHandle.h"/>
+				<F N="include/servant/TMReactor.h"/>
+				<F N="include/servant/Transceiver.h"/>
+				<F N="include/servant/TransceiverHandle.h"/>
+			</Folder>
+			<Folder Name="util">
+				<F N="include/util/atomic_asm.h"/>
+				<F
+					N="include/util/Makefile"
+					Type="Makefile"/>
+				<F N="include/util/tc_atomic.h"/>
+				<F N="include/util/tc_autoptr.h"/>
+				<F N="include/util/tc_base64.h"/>
+				<F N="include/util/tc_bitmap.h"/>
+				<F N="include/util/tc_cgi.h"/>
+				<F N="include/util/tc_clientsocket.h"/>
+				<F N="include/util/tc_common.h"/>
+				<F N="include/util/tc_config.h"/>
+				<F N="include/util/tc_consistent_hash.h"/>
+				<F N="include/util/tc_des.h"/>
+				<F N="include/util/tc_dyn_object.h"/>
+				<F N="include/util/tc_encoder.h"/>
+				<F N="include/util/tc_epoll_server.h"/>
+				<F N="include/util/tc_epoller.h"/>
+				<F N="include/util/tc_ex.h"/>
+				<F N="include/util/tc_file.h"/>
+				<F N="include/util/tc_file_mutex.h"/>
+				<F N="include/util/tc_functor.h"/>
+				<F N="include/util/tc_hash_fun.h"/>
+				<F N="include/util/tc_hashmap.h"/>
+				<F N="include/util/tc_hashmap_compact.h"/>
+				<F N="include/util/tc_http.h"/>
+				<F N="include/util/tc_lock.h"/>
+				<F N="include/util/tc_logger.h"/>
+				<F N="include/util/tc_loki.h"/>
+				<F N="include/util/tc_md5.h"/>
+				<F N="include/util/tc_mem_chunk.h"/>
+				<F N="include/util/tc_mem_queue.h"/>
+				<F N="include/util/tc_mem_vector.h"/>
+				<F N="include/util/tc_mmap.h"/>
+				<F N="include/util/tc_monitor.h"/>
+				<F N="include/util/tc_multi_hashmap.h"/>
+				<F N="include/util/tc_mysql.h"/>
+				<F N="include/util/tc_option.h"/>
+				<F N="include/util/tc_pack.h"/>
+				<F N="include/util/tc_parsepara.h"/>
+				<F N="include/util/tc_rbtree.h"/>
+				<F N="include/util/tc_sem_mutex.h"/>
+				<F N="include/util/tc_shm.h"/>
+				<F N="include/util/tc_singleton.h"/>
+				<F N="include/util/tc_socket.h"/>
+				<F N="include/util/tc_thread.h"/>
+				<F N="include/util/tc_thread_cond.h"/>
+				<F N="include/util/tc_thread_mutex.h"/>
+				<F N="include/util/tc_thread_pool.h"/>
+				<F N="include/util/tc_thread_queue.h"/>
+				<F N="include/util/tc_timeout_queue.h"/>
+				<F N="include/util/tc_timeprovider.h"/>
+			</Folder>
+			<F
+				N="include/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="java">
+			<Folder Name="hessian2hce">
+				<F
+					N="java/hessian2hce/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce">
+				<Folder Name="src">
+					<F N="java/jce/src/client.config.conf"/>
+					<F N="java/jce/src/tafCareSend.conf"/>
+				</Folder>
+			</Folder>
+			<Folder Name="tafservercreate">
+				<Folder Name="src">
+					<F N="java/tafservercreate/src/_SERVANT_.jce"/>
+				</Folder>
+				<F
+					N="java/tafservercreate/makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="tafservertest">
+				<F N="java/tafservertest/Java.TestServer.config.conf"/>
+			</Folder>
+			<F
+				N="java/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="jce">
+			<Folder Name="config">
+				<F N="jce/config/Config.cpp"/>
+				<F N="jce/config/Config.h"/>
+				<F N="jce/config/Config.jce"/>
+				<F
+					N="jce/config/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="jce/log/Log.cpp"/>
+				<F N="jce/log/Log.h"/>
+				<F N="jce/log/Log.jce"/>
+				<F
+					N="jce/log/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="node">
+				<F
+					N="jce/node/Makefile"
+					Type="Makefile"/>
+				<F N="jce/node/Node.cpp"/>
+				<F N="jce/node/Node.h"/>
+				<F N="jce/node/Node.jce"/>
+				<F
+					N="jce/node/Node.mk"
+					Type="Makefile"/>
+				<F N="jce/node/NodeDescriptor.h"/>
+				<F N="jce/node/NodeDescriptor.jce"/>
+			</Folder>
+			<Folder Name="nodeF">
+				<F
+					N="jce/nodeF/Makefile"
+					Type="Makefile"/>
+				<F N="jce/nodeF/NodeF.cpp"/>
+				<F N="jce/nodeF/NodeF.h"/>
+				<F N="jce/nodeF/NodeF.jce"/>
+			</Folder>
+			<Folder Name="notify">
+				<F
+					N="jce/notify/Makefile"
+					Type="Makefile"/>
+				<F N="jce/notify/Notify.cpp"/>
+				<F N="jce/notify/Notify.h"/>
+				<F N="jce/notify/Notify.jce"/>
+			</Folder>
+			<Folder Name="patch">
+				<F
+					N="jce/patch/Makefile"
+					Type="Makefile"/>
+				<F N="jce/patch/Patch.cpp"/>
+				<F N="jce/patch/Patch.h"/>
+				<F N="jce/patch/Patch.jce"/>
+			</Folder>
+			<Folder Name="registry">
+				<F N="jce/registry/AdminReg.cpp"/>
+				<F N="jce/registry/AdminReg.h"/>
+				<F N="jce/registry/AdminReg.jce"/>
+				<F
+					N="jce/registry/Makefile"
+					Type="Makefile"/>
+				<F N="jce/registry/Registry.cpp"/>
+				<F N="jce/registry/Registry.h"/>
+				<F N="jce/registry/Registry.jce"/>
+				<F
+					N="jce/registry/Registry.mk"
+					Type="Makefile"/>
+				<F N="jce/registry/RegistryDescriptor.h"/>
+				<F N="jce/registry/RegistryDescriptor.jce"/>
+			</Folder>
+			<Folder Name="servant">
+				<F N="jce/servant/AdminF.cpp"/>
+				<F N="jce/servant/AdminF.h"/>
+				<F N="jce/servant/AdminF.jce"/>
+				<F N="jce/servant/BaseF.h"/>
+				<F N="jce/servant/BaseF.jce"/>
+				<F N="jce/servant/EndpointF.h"/>
+				<F N="jce/servant/EndpointF.jce"/>
+				<F
+					N="jce/servant/Makefile"
+					Type="Makefile"/>
+				<F N="jce/servant/PropertyF.cpp"/>
+				<F N="jce/servant/PropertyF.h"/>
+				<F N="jce/servant/PropertyF.jce"/>
+				<F N="jce/servant/QueryF.cpp"/>
+				<F N="jce/servant/QueryF.h"/>
+				<F N="jce/servant/QueryF.jce"/>
+				<F N="jce/servant/StatF.cpp"/>
+				<F N="jce/servant/StatF.h"/>
+				<F N="jce/servant/StatF.jce"/>
+			</Folder>
+			<Folder Name="stat">
+				<F
+					N="jce/stat/Makefile"
+					Type="Makefile"/>
+				<F
+					N="jce/stat/Stat.mk"
+					Type="Makefile"/>
+				<F N="jce/stat/StatQuery.cpp"/>
+				<F N="jce/stat/StatQuery.h"/>
+				<F N="jce/stat/StatQuery.jce"/>
+			</Folder>
+			<F
+				N="jce/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="lib">
+			<F
+				N="lib/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="script">
+			<Folder Name="demo">
+				<F N="script/demo/DemoServant.jce"/>
+				<F N="script/demo/DemoServantImp.cpp"/>
+				<F N="script/demo/DemoServantImp.h"/>
+				<F N="script/demo/DemoServer.cpp"/>
+				<F N="script/demo/DemoServer.h"/>
+				<F
+					N="script/demo/makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="HelloServer">
+				<Folder Name="client4c++">
+					<F N="script/HelloServer/client4c++/main.cpp"/>
+					<F
+						N="script/HelloServer/client4c++/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<Folder Name="src">
+					<F N="script/HelloServer/src/fast.conf"/>
+					<F N="script/HelloServer/src/hello.conf"/>
+					<F N="script/HelloServer/src/Hello.cpp"/>
+					<F N="script/HelloServer/src/Hello.h"/>
+					<F N="script/HelloServer/src/Hello.jce"/>
+					<F N="script/HelloServer/src/HelloImp.h"/>
+					<F N="script/HelloServer/src/HelloServer.cpp"/>
+					<F N="script/HelloServer/src/HelloServer.h"/>
+					<F
+						N="script/HelloServer/src/Makefile"
+						Type="Makefile"/>
+					<F N="script/HelloServer/src/slow.conf"/>
+				</Folder>
+				<Folder Name="srcB">
+					<F N="script/HelloServer/srcB/hello.conf"/>
+					<F N="script/HelloServer/srcB/Hello.cpp"/>
+					<F N="script/HelloServer/srcB/Hello.h"/>
+					<F N="script/HelloServer/srcB/Hello.jce"/>
+					<F N="script/HelloServer/srcB/HelloImp.h"/>
+					<F N="script/HelloServer/srcB/HelloServer.cpp"/>
+					<F N="script/HelloServer/srcB/HelloServer.h"/>
+					<F
+						N="script/HelloServer/srcB/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<F
+					N="script/HelloServer/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="install_taf">
+				<Folder Name="taf">
+					<Folder Name="tafadmin">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafadmin/conf/admin.config.conf"/>
+						</Folder>
+					</Folder>
+					<Folder Name="tafnode">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafnode/conf/node.config.conf"/>
+						</Folder>
+					</Folder>
+					<Folder Name="tafregistry">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafregistry/conf/registry.config.conf"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="taf">
+				<Folder Name="tafadmin">
+					<Folder Name="conf">
+						<F N="script/taf/tafadmin/conf/admin.config.conf"/>
+					</Folder>
+				</Folder>
+				<Folder Name="tafnode">
+					<Folder Name="conf">
+						<F N="script/taf/tafnode/conf/node.config.conf"/>
+					</Folder>
+				</Folder>
+				<Folder Name="tafregistry">
+					<Folder Name="conf">
+						<F N="script/taf/tafregistry/conf/registry.config.conf"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<F
+				N="script/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="src">
+			<Folder Name="adminclient">
+				<F N="src/adminclient/Client.cpp"/>
+				<F N="src/adminclient/Client.h"/>
+				<F N="src/adminclient/Grammar.cpp"/>
+				<F N="src/adminclient/Grammar.hpp"/>
+				<F N="src/adminclient/Grammar.y"/>
+				<F
+					N="src/adminclient/Makefile"
+					Type="Makefile"/>
+				<F N="src/adminclient/Parser.cpp"/>
+				<F N="src/adminclient/Parser.h"/>
+				<F N="src/adminclient/Scanner.cpp"/>
+				<F N="src/adminclient/Scanner.l"/>
+			</Folder>
+			<Folder Name="config">
+				<F N="src/config/Config.cpp"/>
+				<F N="src/config/ConfigImp.cpp"/>
+				<F N="src/config/ConfigImp.h"/>
+				<F N="src/config/ConfigServer.cpp"/>
+				<F N="src/config/ConfigServer.h"/>
+				<F N="src/config/main.cpp"/>
+				<F
+					N="src/config/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="hce2cpp">
+				<F N="src/hce2cpp/element.cpp"/>
+				<F N="src/hce2cpp/element.h"/>
+				<F N="src/hce2cpp/hce.l"/>
+				<F N="src/hce2cpp/hce.tab.cpp"/>
+				<F N="src/hce2cpp/hce.tab.hpp"/>
+				<F N="src/hce2cpp/hce.y"/>
+				<F N="src/hce2cpp/hce2cpp.cpp"/>
+				<F N="src/hce2cpp/hce2cpp.h"/>
+				<F N="src/hce2cpp/lex.yy.cpp"/>
+				<F N="src/hce2cpp/main.cpp"/>
+				<F
+					N="src/hce2cpp/Makefile"
+					Type="Makefile"/>
+				<F N="src/hce2cpp/parse.cpp"/>
+				<F N="src/hce2cpp/parse.h"/>
+			</Folder>
+			<Folder Name="jce2c">
+				<F N="src/jce2c/jce2c.cpp"/>
+				<F N="src/jce2c/jce2c.h"/>
+				<F N="src/jce2c/main.cpp"/>
+				<F
+					N="src/jce2c/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce2cpp">
+				<F N="src/jce2cpp/jce2cpp.cpp"/>
+				<F N="src/jce2cpp/jce2cpp.h"/>
+				<F N="src/jce2cpp/main.cpp"/>
+				<F
+					N="src/jce2cpp/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce2java">
+				<F N="src/jce2java/jce2java.cpp"/>
+				<F N="src/jce2java/jce2java.h"/>
+				<F N="src/jce2java/main.cpp"/>
+				<F
+					N="src/jce2java/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce2symcpp">
+				<F N="src/jce2symcpp/jce2symcpp.cpp"/>
+				<F N="src/jce2symcpp/jce2symcpp.h"/>
+				<F N="src/jce2symcpp/main.cpp"/>
+				<F
+					N="src/jce2symcpp/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="libconfig">
+				<F
+					N="src/libconfig/Makefile"
+					Type="Makefile"/>
+				<F N="src/libconfig/taf_config.cpp"/>
+			</Folder>
+			<Folder Name="libhessian">
+				<F N="src/libhessian/HessianInput.cpp"/>
+				<F N="src/libhessian/HessianOutput.cpp"/>
+				<F N="src/libhessian/HessianProxy.cpp"/>
+				<F N="src/libhessian/HessianWrappers.cpp"/>
+				<F
+					N="src/libhessian/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="liblog">
+				<F
+					N="src/liblog/Makefile"
+					Type="Makefile"/>
+				<F N="src/liblog/taf_logger.cpp"/>
+			</Folder>
+			<Folder Name="libnodeF">
+				<Folder Name="libhessian">
+					<F N="src/libnodeF/libhessian/HessianInput.cpp"/>
+					<F N="src/libnodeF/libhessian/HessianOutput.cpp"/>
+					<F N="src/libnodeF/libhessian/HessianProxy.cpp"/>
+					<F N="src/libnodeF/libhessian/HessianWrappers.cpp"/>
+					<F
+						N="src/libnodeF/libhessian/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<F
+					N="src/libnodeF/Makefile"
+					Type="Makefile"/>
+				<F N="src/libnodeF/NodeF.cpp"/>
+				<F N="src/libnodeF/taf_nodeF.cpp"/>
+			</Folder>
+			<Folder Name="libnotify">
+				<F
+					N="src/libnotify/Makefile"
+					Type="Makefile"/>
+				<F N="src/libnotify/taf_notify.cpp"/>
+			</Folder>
+			<Folder Name="libparse">
+				<F N="src/libparse/element.cpp"/>
+				<F N="src/libparse/jce.l"/>
+				<F N="src/libparse/jce.tab.cpp"/>
+				<F N="src/libparse/jce.tab.hpp"/>
+				<F N="src/libparse/jce.y"/>
+				<F N="src/libparse/lex.yy.cpp"/>
+				<F
+					N="src/libparse/Makefile"
+					Type="Makefile"/>
+				<F N="src/libparse/parse.cpp"/>
+			</Folder>
+			<Folder Name="libpatch">
+				<F
+					N="src/libpatch/Makefile"
+					Type="Makefile"/>
+				<F N="src/libpatch/taf_patch.cpp"/>
+			</Folder>
+			<Folder Name="libservant">
+				<F N="src/libservant/AdapterProxy.cpp"/>
+				<F N="src/libservant/AdminF.cpp"/>
+				<F N="src/libservant/AdminServant.cpp"/>
+				<F N="src/libservant/Application.cpp"/>
+				<F N="src/libservant/AppProtocol.cpp"/>
+				<F N="src/libservant/AsyncProcThread.cpp"/>
+				<F N="src/libservant/BaseNotify.cpp"/>
+				<F N="src/libservant/BaseProxy.cpp"/>
+				<F N="src/libservant/Communicator.cpp"/>
+				<F N="src/libservant/Connector.cpp"/>
+				<F N="src/libservant/EndpointInfo.cpp"/>
+				<F N="src/libservant/FDReactor.cpp"/>
+				<F N="src/libservant/Global.cpp"/>
+				<F N="src/libservant/JceCurrent.cpp"/>
+				<F
+					N="src/libservant/Makefile"
+					Type="Makefile"/>
+				<F N="src/libservant/Message.cpp"/>
+				<F N="src/libservant/NetworkUtil.cpp"/>
+				<F N="src/libservant/NotifyObserver.cpp"/>
+				<F N="src/libservant/ObjectProxy.cpp"/>
+				<F N="src/libservant/ObjectProxyFactory.cpp"/>
+				<F N="src/libservant/PropertyF.cpp"/>
+				<F N="src/libservant/PropertyReport.cpp"/>
+				<F N="src/libservant/QueryEndpoint.cpp"/>
+				<F N="src/libservant/QueryF.cpp"/>
+				<F N="src/libservant/Servant.cpp"/>
+				<F N="src/libservant/ServantHandle.cpp"/>
+				<F N="src/libservant/ServantHelper.cpp"/>
+				<F N="src/libservant/ServantProxy.cpp"/>
+				<F N="src/libservant/ServantProxyFactory.cpp"/>
+				<F N="src/libservant/StatF.cpp"/>
+				<F N="src/libservant/StatReport.cpp"/>
+				<F N="src/libservant/TMReactor.cpp"/>
+				<F N="src/libservant/Transceiver.cpp"/>
+				<F N="src/libservant/TransceiverHandle.cpp"/>
+			</Folder>
+			<Folder Name="libutil">
+				<F
+					N="src/libutil/Makefile"
+					Type="Makefile"/>
+				<F N="src/libutil/tc_base64.cpp"/>
+				<F N="src/libutil/tc_bitmap.cpp"/>
+				<F N="src/libutil/tc_cgi.cpp"/>
+				<F N="src/libutil/tc_clientsocket.cpp"/>
+				<F N="src/libutil/tc_common.cpp"/>
+				<F N="src/libutil/tc_config.cpp"/>
+				<F N="src/libutil/tc_des.cpp"/>
+				<F N="src/libutil/tc_dyn_object.cpp"/>
+				<F N="src/libutil/tc_encoder.cpp"/>
+				<F N="src/libutil/tc_epoll_server.cpp"/>
+				<F N="src/libutil/tc_epoller.cpp"/>
+				<F N="src/libutil/tc_ex.cpp"/>
+				<F N="src/libutil/tc_file.cpp"/>
+				<F N="src/libutil/tc_file_mutex.cpp"/>
+				<F N="src/libutil/tc_hashmap.cpp"/>
+				<F N="src/libutil/tc_hashmap_compact.cpp"/>
+				<F N="src/libutil/tc_http.cpp"/>
+				<F N="src/libutil/tc_logger.cpp"/>
+				<F N="src/libutil/tc_md5.cpp"/>
+				<F N="src/libutil/tc_mem_chunk.cpp"/>
+				<F N="src/libutil/tc_mem_queue.cpp"/>
+				<F N="src/libutil/tc_mmap.cpp"/>
+				<F N="src/libutil/tc_multi_hashmap.cpp"/>
+				<F N="src/libutil/tc_mysql.cpp"/>
+				<F N="src/libutil/tc_option.cpp"/>
+				<F N="src/libutil/tc_pack.cpp"/>
+				<F N="src/libutil/tc_parsepara.cpp"/>
+				<F N="src/libutil/tc_rbtree.cpp"/>
+				<F N="src/libutil/tc_sem_mutex.cpp"/>
+				<F N="src/libutil/tc_shm.cpp"/>
+				<F N="src/libutil/tc_socket.cpp"/>
+				<F N="src/libutil/tc_thread.cpp"/>
+				<F N="src/libutil/tc_thread_cond.cpp"/>
+				<F N="src/libutil/tc_thread_mutex.cpp"/>
+				<F N="src/libutil/tc_thread_pool.cpp"/>
+				<F N="src/libutil/tc_timeprovider.cpp"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="src/log/Log.cpp"/>
+				<F N="src/log/LogImp.cpp"/>
+				<F N="src/log/LogImp.h"/>
+				<F N="src/log/LogServer.cpp"/>
+				<F N="src/log/LogServer.h"/>
+				<F N="src/log/main.cpp"/>
+				<F
+					N="src/log/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="node">
+				<F N="src/node/Activator.cpp"/>
+				<F N="src/node/Activator.h"/>
+				<F N="src/node/CommandAddFile.h"/>
+				<F N="src/node/CommandDestroy.h"/>
+				<F N="src/node/CommandLoad.h"/>
+				<F N="src/node/CommandNotify.h"/>
+				<F N="src/node/CommandPatch.h"/>
+				<F N="src/node/CommandStart.h"/>
+				<F N="src/node/CommandStop.h"/>
+				<F N="src/node/KeepAliveThread.cpp"/>
+				<F N="src/node/KeepAliveThread.h"/>
+				<F N="src/node/main.cpp"/>
+				<F
+					N="src/node/Makefile"
+					Type="Makefile"/>
+				<F N="src/node/NodeImp.cpp"/>
+				<F N="src/node/NodeImp.h"/>
+				<F N="src/node/NodeServer.cpp"/>
+				<F N="src/node/NodeServer.h"/>
+				<F N="src/node/PlatformInfo.cpp"/>
+				<F N="src/node/PlatformInfo.h"/>
+				<F N="src/node/RegistryProxy.h"/>
+				<F N="src/node/ServerCommand.h"/>
+				<F N="src/node/ServerFactory.cpp"/>
+				<F N="src/node/ServerFactory.h"/>
+				<F N="src/node/ServerImp.cpp"/>
+				<F N="src/node/ServerImp.h"/>
+				<F N="src/node/ServerObject.cpp"/>
+				<F N="src/node/ServerObject.h"/>
+			</Folder>
+			<Folder Name="notify">
+				<F N="src/notify/main.cpp"/>
+				<F
+					N="src/notify/Makefile"
+					Type="Makefile"/>
+				<F N="src/notify/Notify.cpp"/>
+				<F N="src/notify/NotifyImp.cpp"/>
+				<F N="src/notify/NotifyImp.h"/>
+				<F N="src/notify/NotifyServer.cpp"/>
+				<F N="src/notify/NotifyServer.h"/>
+			</Folder>
+			<Folder Name="patch">
+				<F N="src/patch/main.cpp"/>
+				<F
+					N="src/patch/Makefile"
+					Type="Makefile"/>
+				<F N="src/patch/Patch.cpp"/>
+				<F N="src/patch/PatchImp.cpp"/>
+				<F N="src/patch/PatchImp.h"/>
+				<F N="src/patch/PatchServer.cpp"/>
+				<F N="src/patch/PatchServer.h"/>
+			</Folder>
+			<Folder Name="patchclient">
+				<F
+					N="src/patchclient/Makefile"
+					Type="Makefile"/>
+				<F N="src/patchclient/patchclient.cpp"/>
+				<F N="src/patchclient/taf_patch.cpp"/>
+			</Folder>
+			<Folder Name="property">
+				<F N="src/property/main.cpp"/>
+				<F
+					N="src/property/Makefile"
+					Type="Makefile"/>
+				<F N="src/property/PropertyHashMap.h"/>
+				<F N="src/property/PropertyImp.cpp"/>
+				<F N="src/property/PropertyImp.h"/>
+				<F N="src/property/PropertyServer.cpp"/>
+				<F N="src/property/PropertyServer.h"/>
+				<F N="src/property/ReapThread.cpp"/>
+				<F N="src/property/ReapThread.h"/>
+			</Folder>
+			<Folder Name="registry">
+				<F N="src/registry/AdminRegImp.cpp"/>
+				<F N="src/registry/AdminRegImp.h"/>
+				<F N="src/registry/DbHandle.cpp"/>
+				<F N="src/registry/DbHandle.h"/>
+				<F N="src/registry/main.cpp"/>
+				<F
+					N="src/registry/Makefile"
+					Type="Makefile"/>
+				<F N="src/registry/QueryImp.cpp"/>
+				<F N="src/registry/QueryImp.h"/>
+				<F N="src/registry/ReapThread.cpp"/>
+				<F N="src/registry/ReapThread.h"/>
+				<F N="src/registry/RegistryImp.cpp"/>
+				<F N="src/registry/RegistryImp.h"/>
+				<F N="src/registry/RegistryServer.cpp"/>
+				<F N="src/registry/RegistryServer.h"/>
+			</Folder>
+			<Folder Name="stat">
+				<F N="src/stat/main.cpp"/>
+				<F
+					N="src/stat/Makefile"
+					Type="Makefile"/>
+				<F N="src/stat/ReapThread.cpp"/>
+				<F N="src/stat/ReapThread.h"/>
+				<F N="src/stat/StatHashMap.h"/>
+				<F N="src/stat/StatImp.cpp"/>
+				<F N="src/stat/StatImp.h"/>
+				<F N="src/stat/StatQueryHashMap.h"/>
+				<F N="src/stat/StatQueryImp.cpp"/>
+				<F N="src/stat/StatQueryImp.h"/>
+				<F N="src/stat/StatServer.cpp"/>
+				<F N="src/stat/StatServer.h"/>
+			</Folder>
+			<Folder Name="xmlproxy">
+				<F
+					N="src/xmlproxy/Makefile"
+					Type="Makefile"/>
+				<F N="src/xmlproxy/Markup.cpp"/>
+				<F N="src/xmlproxy/Markup.h"/>
+				<F N="src/xmlproxy/server.config.conf"/>
+				<F N="src/xmlproxy/XmlHandle.cpp"/>
+				<F N="src/xmlproxy/XmlHandle.h"/>
+				<F N="src/xmlproxy/xmlproxy.conf"/>
+				<F N="src/xmlproxy/XmlProxyCallback.cpp"/>
+				<F N="src/xmlproxy/XmlProxyCallback.h"/>
+				<F N="src/xmlproxy/XmlProxyServer.cpp"/>
+				<F N="src/xmlproxy/XmlProxyServer.h"/>
+			</Folder>
+			<F
+				N="src/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<Folder Name="test">
+			<Folder Name="admin">
+				<F N="test/admin/main.cpp"/>
+				<F
+					N="test/admin/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="AServer">
+				<F N="test/AServer/22345.conf"/>
+				<F N="test/AServer/22346.conf"/>
+				<F N="test/AServer/22347.conf"/>
+				<F N="test/AServer/44345.conf"/>
+				<F N="test/AServer/A.jce"/>
+				<F N="test/AServer/AImp.cpp"/>
+				<F N="test/AServer/AImp.h"/>
+				<F N="test/AServer/AServer.cpp"/>
+				<F N="test/AServer/AServer.h"/>
+				<F
+					N="test/AServer/makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="async">
+				<F N="test/async/main.cpp"/>
+				<F N="test/async/tc_async_http.cpp"/>
+				<F N="test/async/tc_async_http.h"/>
+			</Folder>
+			<Folder Name="BServer">
+				<F N="test/BServer/22345.conf"/>
+				<F N="test/BServer/22346.conf"/>
+				<F N="test/BServer/22347.conf"/>
+				<F N="test/BServer/44345.conf"/>
+				<F N="test/BServer/A.jce"/>
+				<F N="test/BServer/AImp.cpp"/>
+				<F N="test/BServer/AImp.h"/>
+				<F N="test/BServer/AServer.cpp"/>
+				<F N="test/BServer/AServer.h"/>
+				<F
+					N="test/BServer/makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="client">
+				<F N="test/client/JceProxy.cpp"/>
+				<F N="test/client/JceProxy.h"/>
+				<F N="test/client/main.cpp"/>
+				<F
+					N="test/client/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="coder">
+				<F N="test/coder/EndpointF.jce"/>
+				<F N="test/coder/main.cpp"/>
+				<F
+					N="test/coder/Makefile"
+					Type="Makefile"/>
+				<F N="test/coder/QueryF.jce"/>
+			</Folder>
+			<Folder Name="config">
+				<F N="test/config/main.cpp"/>
+				<F
+					N="test/config/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="hce2cpp">
+				<F N="test/hce2cpp/main.cpp"/>
+				<F
+					N="test/hce2cpp/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="HelloServer">
+				<Folder Name="client">
+					<F N="test/HelloServer/client/main.cpp"/>
+					<F
+						N="test/HelloServer/client/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<Folder Name="src">
+					<F N="test/HelloServer/src/CCProtocol.h"/>
+					<F N="test/HelloServer/src/hello.conf"/>
+					<F N="test/HelloServer/src/Hello.cpp"/>
+					<F N="test/HelloServer/src/Hello.h"/>
+					<F N="test/HelloServer/src/Hello.jce"/>
+					<F N="test/HelloServer/src/hello2.conf"/>
+					<F N="test/HelloServer/src/HelloImp.cpp"/>
+					<F N="test/HelloServer/src/HelloImp.h"/>
+					<F N="test/HelloServer/src/HelloServer.cpp"/>
+					<F N="test/HelloServer/src/HelloServer.h"/>
+					<F
+						N="test/HelloServer/src/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<Folder Name="transfer">
+					<F N="test/HelloServer/transfer/hello.conf"/>
+					<F N="test/HelloServer/transfer/hello2.conf"/>
+					<F N="test/HelloServer/transfer/hello3.conf"/>
+					<F N="test/HelloServer/transfer/HelloImp.h"/>
+					<F N="test/HelloServer/transfer/HelloServer.cpp"/>
+					<F N="test/HelloServer/transfer/HelloServer.h"/>
+					<F
+						N="test/HelloServer/transfer/Makefile"
+						Type="Makefile"/>
+				</Folder>
+				<Folder Name="wup_client">
+					<F N="test/HelloServer/wup_client/main.cpp"/>
+					<F
+						N="test/HelloServer/wup_client/Makefile"
+						Type="Makefile"/>
+				</Folder>
+			</Folder>
+			<Folder Name="hessian">
+				<F N="test/hessian/main.cpp"/>
+				<F
+					N="test/hessian/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="jce2cpp">
+				<F N="test/jce2cpp/main.cpp"/>
+				<F
+					N="test/jce2cpp/Makefile"
+					Type="Makefile"/>
+				<F N="test/jce2cpp/test.jce"/>
+				<F N="test/jce2cpp/test1.jce"/>
+				<F N="test/jce2cpp/test2.jce"/>
+			</Folder>
+			<Folder Name="jce2java">
+				<F N="test/jce2java/main.cpp"/>
+				<F
+					N="test/jce2java/makefile"
+					Type="Makefile"/>
+				<F N="test/jce2java/server.config.conf"/>
+				<F N="test/jce2java/Server.jce"/>
+				<F N="test/jce2java/TestServer.cpp"/>
+				<F N="test/jce2java/TestServer.h"/>
+			</Folder>
+			<Folder Name="jmem">
+				<F N="test/jmem/HashMapCompactTest.cpp"/>
+				<F N="test/jmem/HashMapCompactTest.h"/>
+				<F N="test/jmem/HashMapTest.cpp"/>
+				<F N="test/jmem/HashMapTest.h"/>
+				<F N="test/jmem/main.cpp"/>
+				<F
+					N="test/jmem/Makefile"
+					Type="Makefile"/>
+				<F N="test/jmem/MultiHashMapTest.cpp"/>
+				<F N="test/jmem/MultiHashMapTest.h"/>
+				<F N="test/jmem/QueueTest.cpp"/>
+				<F N="test/jmem/QueueTest.h"/>
+				<F N="test/jmem/RBTreeTest.cpp"/>
+				<F N="test/jmem/RBTreeTest.h"/>
+				<F N="test/jmem/test.jce"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="test/log/client.config.conf"/>
+				<F N="test/log/main.cpp"/>
+				<F
+					N="test/log/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="node">
+				<F N="test/node/main.cpp"/>
+				<F
+					N="test/node/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="notify">
+				<F N="test/notify/main.cpp"/>
+				<F
+					N="test/notify/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="ping">
+				<F N="test/ping/main.cpp"/>
+				<F
+					N="test/ping/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="property">
+				<F N="test/property/main.cpp"/>
+				<F
+					N="test/property/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="registry">
+				<F N="test/registry/main.cpp"/>
+				<F
+					N="test/registry/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="simple">
+				<F N="test/simple/echo.h"/>
+				<F
+					N="test/simple/Makefile"
+					Type="Makefile"/>
+				<F N="test/simple/simple.cpp"/>
+			</Folder>
+			<Folder Name="stat">
+				<F N="test/stat/main.cpp"/>
+				<F
+					N="test/stat/Makefile"
+					Type="Makefile"/>
+			</Folder>
+			<Folder Name="TCServer">
+				<Folder Name="client">
+					<F N="test/TCServer/client/JceProxy.cpp"/>
+					<F N="test/TCServer/client/JceProxy.h"/>
+					<F
+						N="test/TCServer/client/Makefile"
+						Type="Makefile"/>
+					<F N="test/TCServer/client/TestTCServer.cpp"/>
+				</Folder>
+				<F N="test/TCServer/echo.h"/>
+				<F N="test/TCServer/hello.conf"/>
+				<F N="test/TCServer/Hello.cpp"/>
+				<F N="test/TCServer/Hello.h"/>
+				<F N="test/TCServer/Hello.jce"/>
+				<F N="test/TCServer/HelloImp.h"/>
+				<F N="test/TCServer/http.h"/>
+				<F
+					N="test/TCServer/Makefile"
+					Type="Makefile"/>
+				<F N="test/TCServer/string.h"/>
+				<F N="test/TCServer/TCServer.cpp"/>
+				<F N="test/TCServer/TCServer.h"/>
+			</Folder>
+			<Folder Name="TestClient">
+				<F N="test/TestClient/client.config.conf"/>
+				<F N="test/TestClient/Collector.cpp"/>
+				<F N="test/TestClient/Collector.h"/>
+				<F N="test/TestClient/main.cpp"/>
+				<F
+					N="test/TestClient/Makefile"
+					Type="Makefile"/>
+				<F N="test/TestClient/Random.h"/>
+				<F N="test/TestClient/TestBasePrxCallbackImp.h"/>
+				<F N="test/TestClient/TestCase.h"/>
+				<F N="test/TestClient/TestThread.h"/>
+				<F N="test/TestClient/ToStr.h"/>
+			</Folder>
+			<Folder Name="TestServer">
+				<F N="test/TestServer/count_time.hpp"/>
+				<F N="test/TestServer/main.cpp"/>
+				<F
+					N="test/TestServer/Makefile"
+					Type="Makefile"/>
+				<F N="test/TestServer/server.config.conf"/>
+				<F N="test/TestServer/Test.jce"/>
+				<F N="test/TestServer/TestBaseImp.h"/>
+				<F N="test/TestServer/TestExtImp.h"/>
+				<F N="test/TestServer/TestServer.cpp"/>
+				<F N="test/TestServer/TestServer.h"/>
+			</Folder>
+			<Folder Name="TransServer">
+				<F N="test/TransServer/CCProtocol.h"/>
+				<F
+					N="test/TransServer/Makefile"
+					Type="Makefile"/>
+				<F N="test/TransServer/trans.conf"/>
+				<F N="test/TransServer/TransImp.cpp"/>
+				<F N="test/TransServer/TransImp.h"/>
+				<F N="test/TransServer/TransServer.cpp"/>
+				<F N="test/TransServer/TransServer.h"/>
+			</Folder>
+			<Folder Name="util">
+				<F N="test/util/log.config.conf"/>
+				<F
+					N="test/util/Makefile"
+					Type="Makefile"/>
+				<F N="test/util/template.config.conf"/>
+				<F N="test/util/test_tc_autoptr.cpp"/>
+				<F N="test/util/test_tc_bitmap.cpp"/>
+				<F N="test/util/test_tc_cgi.cpp"/>
+				<F N="test/util/test_tc_common.cpp"/>
+				<F N="test/util/test_tc_config.cpp"/>
+				<F N="test/util/test_tc_des.cpp"/>
+				<F N="test/util/test_tc_encoder.cpp"/>
+				<F N="test/util/test_tc_file.cpp"/>
+				<F N="test/util/test_tc_file_lock.cpp"/>
+				<F N="test/util/test_tc_functor.cpp"/>
+				<F N="test/util/test_tc_hashmap.cpp"/>
+				<F N="test/util/test_tc_http.cpp"/>
+				<F N="test/util/test_tc_log.cpp"/>
+				<F N="test/util/test_tc_loki.cpp"/>
+				<F N="test/util/test_tc_mem_chunk.cpp"/>
+				<F N="test/util/test_tc_mem_queue.cpp"/>
+				<F N="test/util/test_tc_mmap.cpp"/>
+				<F N="test/util/test_tc_multi_hashmap.cpp"/>
+				<F N="test/util/test_tc_mysql.cpp"/>
+				<F N="test/util/test_tc_option.cpp"/>
+				<F N="test/util/test_tc_pack.cpp"/>
+				<F N="test/util/test_tc_singleton.cpp"/>
+				<F N="test/util/test_tc_socket.cpp"/>
+				<F N="test/util/test_tc_thread.cpp"/>
+				<F N="test/util/test_tc_thread_lock.cpp"/>
+				<F N="test/util/test_tc_thread_pool.cpp"/>
+				<F N="test/util/test_tc_thread_queue.cpp"/>
+			</Folder>
+			<Folder Name="WupProxyServer">
+				<Folder Name="client">
+					<F N="test/WupProxyServer/client/main.cpp"/>
+				</Folder>
+				<F N="test/WupProxyServer/WupProxyImp.cpp"/>
+				<F N="test/WupProxyServer/WupProxyImp.h"/>
+				<F N="test/WupProxyServer/WupProxyManager.cpp"/>
+				<F N="test/WupProxyServer/WupProxyManager.h"/>
+				<F N="test/WupProxyServer/WupProxyServer.cpp"/>
+				<F N="test/WupProxyServer/WupProxyServer.h"/>
+			</Folder>
+			<Folder Name="wup">
+				<F N="test/wup/Test.h"/>
+				<F N="test/wup/Test.jce"/>
+			</Folder>
+			<Folder Name="xmlproxy">
+				<F N="test/xmlproxy/ats.cpp"/>
+				<F
+					N="test/xmlproxy/makefile"
+					Type="Makefile"/>
+			</Folder>
+			<F
+				N="test/Makefile"
+				Type="Makefile"/>
+		</Folder>
+		<F
+			N="inc.mk"
+			Type="Makefile"/>
+		<F
+			N="Makefile"
+			Type="Makefile"/>
+		<F
+			N="taf.mk"
+			Type="Makefile"/>
+	</Files>
+</Project>

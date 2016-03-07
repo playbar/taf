@@ -1,0 +1,1 @@
+需要先通过jce2java hello.jce 生成的客户端调用代理HelloPrx

@@ -1,0 +1,23 @@
+<taf>
+        <db>
+                dbhost = 127.0.0.1
+                dbname = db_taf_stat
+                tbname = t_stat_realtime
+                dbuser = root
+                dbpass = 
+                dbport = 3306
+                charset =  
+        </db>
+
+        <hashmap>
+                file = hashmap.hmap
+                clonefile= hashmap_clone.hmap
+                masterfile=hashmap_master.hmap
+                slavefile=hashmap_slave.hmap
+                size = 10M
+                insertInterval =  5
+        </hashmap>
+         
+        sql = CREATE TABLE `${TABLE}`(`stattime` timestamp NOT NULL default CURRENT_TIMESTAMP,`master_name` varchar(128) default NULL,`slave_name` varchar(128) default NULL,`interface_name` varchar(128) default NULL,`master_ip` varchar(15) default NULL,`slave_ip` varchar(15) default NULL,`slave_port` int(10) default NULL,`return_value` int(11) default NULL,`succ_count` int(10) unsigned default NULL,`timeout_count` int(10) unsigned default NULL,`exce_count` int(10) unsigned default NULL,`interv_count` varchar(128) default NULL,`total_time` int(10) unsigned default NULL,`ave_time` int(10) unsigned default NULL,`maxrsp_time` int(10) unsigned default NULL,`minrsp_time` int(10) unsigned default NULL,KEY `IDX_TIME` (`stattime`),KEY `IDC_MASTER` (`master_name`),KEY `IDX_INTERFACENAME` (`interface_name`),KEY `IDX_SLAVEIP` (`slave_ip`),KEY `IDX_SLAVE` (`slave_name`),KEY `IDX_RETVALUE` (`return_value`)) ENGINE=MyISAM
+#DEFAULT CHARSET=gbk
+  </taf>

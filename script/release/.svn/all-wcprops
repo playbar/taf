@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/release
+END
+release_all.sh
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/release/release_all.sh
+END
+clean_obj.sh
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/release/clean_obj.sh
+END

@@ -1,0 +1,17 @@
+
+module taf
+{
+    interface AdminF
+    {
+        /**
+        * 关闭服务
+        */
+        void shutdown();
+
+        /**
+        * 通知服务
+        */
+        string notify(string command);
+    };
+};
+

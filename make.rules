@@ -1,0 +1,113 @@
+
+#-------------------------------------------------------------------------------
+export LC_ALL	= zh_CN.GB2312
+export LANG	= zh_CN.GB2312
+PLATFORM       	= $(strip $(shell echo `uname -m`))
+
+#-------------------------------------------------------------------------------
+
+VERSION_MAJOR  := 4
+VERSION_MINOR  := 6
+VERSION_PATCH  := 0
+TAF_VERSION    := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_PATCH)
+
+#-------------------------------------------------------------------------------
+
+INSTALL_PATH   := /usr/local/taf-version/taf-$(TAF_VERSION)
+LINK_PATH      := /usr/local/taf-version/taf
+
+#-------------------------------------------------------------------------------
+JCE2CS	       := ${TOPDIR}/bin/jce2cs
+JCE2PHP        := ${TOPDIR}/bin/jce2php
+JCE2CPP        := ${TOPDIR}/bin/jce2cpp
+JCE2JAVA       := ${TOPDIR}/bin/jce2java
+JCE2C          := ${TOPDIR}/bin/jce2c
+JCE2ARRAYCPP   := ${TOPDIR}/bin/jce2arraycpp
+HCE2CPP        := ${TOPDIR}/bin/hce2cpp
+NODEBIN        := ${TOPDIR}/bin/tafnode
+PATCHBIN       := ${TOPDIR}/bin/tafpatch
+PATCHSYNCBIN   := ${TOPDIR}/bin/tafpatchclient
+REGISTRYBIN    := ${TOPDIR}/bin/tafregistry
+LOGBIN         := ${TOPDIR}/bin/taflog
+ADMINCLIENT    := ${TOPDIR}/bin/tafadminclient
+CONFIGBIN      := ${TOPDIR}/bin/tafconfig
+NOTIFYBIN      := ${TOPDIR}/bin/tafnotify
+STATBIN        := ${TOPDIR}/bin/tafstat
+PROPERTYBIN    := ${TOPDIR}/bin/tafproperty
+XMLPROXYBIN    := ${TOPDIR}/bin/tafxmlproxy
+
+UTILLIB        := libutil.a
+PARSELIB       := libparse.a
+HESSIANLIB     := libhessian.a
+SERVANTLIB     := libservant.a
+LOGLIB         := liblog.a
+PATCHLIB       := libpatch.a
+CONFIGLIB      := libconfig.a
+NOTIFYLIB      := libnotify.a
+NODEFLIB       := libnodeF.a
+
+TAFLIB	       := -lservant -lnodeF -llog -lpatch -lconfig -lnotify -lutil
+
+TAFLIB_PATH	:= ${TOPDIR}/lib/
+TAFLIB_PATH_32	:= ${TOPDIR}/lib32/
+TAFLIB_PATH_64	:= ${TOPDIR}/lib64/
+
+#-------------------------------------------------------------------------------
+
+CC          	= gcc
+CXX         	= g++
+CFLAGS      	+= -g -Wno-deprecated -Wall -DTAF_VERSION=\"$(TAF_VERSION)\"
+#-pg
+JCEFLAGS    	=
+
+#-------------------------------------------------------------------------------
+
+YACC        	:= bison
+LEX         	:= flex
+
+#-------------------------------------------------------------------------------
+
+JCE_SRC     	:= $(wildcard *.jce)
+JCE_H       	:= $(patsubst %.jce,%.h, $(JCE_SRC))
+JCE_INTER   	:= $(if $(JCE_SRC), $(shell grep -ls interface $(JCE_SRC)))
+JCE_CPP     	:= $(patsubst %.jce,%.cpp, $(JCE_INTER))
+JCE_OBJ     	:= $(patsubst %.jce,%.o, $(JCE_INTER))
+
+HCE_SRC     	:= $(wildcard *.hce)
+HCE_H       	:= $(patsubst %.hce,%.h, $(HCE_SRC))
+HCE_CPP     	:= $(patsubst %.hce,%.cpp, $(HCE_SRC))
+HCE_OBJ     	:= $(patsubst %.hce,%.o, $(HCE_SRC))
+
+LOCAL_SRC   	+= $(sort $(wildcard *.cpp *.c) $(JCE_CPP) $(HCE_CPP))
+LOCAL_OBJ   	+= $(patsubst %.cpp,%.o, $(patsubst %.c,%.o, $(LOCAL_SRC)))
+DEP_FILE    	:= $(foreach obj, $(LOCAL_OBJ), $(dir $(obj)).$(basename $(notdir $(obj))).d)
+
+#-------------------------------------------------------------------------------
+SERVANT_H   	:= ${TOPDIR}/include/servant
+SERVANT_C   	:= ${TOPDIR}/src/libservant
+
+NODEF_H     	:= ${TOPDIR}/include/nodeF
+NODEF_C     	:= ${TOPDIR}/src/libnodeF
+
+LOG_H       	:= ${TOPDIR}/include/log
+LOG_C       	:= ${TOPDIR}/src/log
+
+PATCH_H     	:= ${TOPDIR}/include/patch
+PATCH_C     	:= ${TOPDIR}/src/patch
+
+CONFIG_H    	:= ${TOPDIR}/include/config
+CONFIG_C    	:= ${TOPDIR}/src/config
+
+NOTIFY_H    	:= ${TOPDIR}/include/notify
+NOTIFY_C    	:= ${TOPDIR}/src/notify
+
+STAT_H      	:= ${TOPDIR}/include/stat
+STAT_C      	:= ${TOPDIR}/src/stat
+
+#-------------------------------------------------------------------------------
+INCLUDE     	+= -I${TOPDIR}/include -I/usr/local/mysql/include/mysql
+#LIB        	+= -L${TOPDIR}/lib -lpthread -L/usr/local/mysql/lib/mysql
+LIB_32      	+= -L${TAFLIB_PATH_32} -lpthread -L/usr/local/mysql/lib/mysql
+LIB_64      	+= -L${TAFLIB_PATH_64} -lpthread -L/usr/local/mysql/lib/mysql
+
+#-------------------------------------------------------------------------------

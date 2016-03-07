@@ -1,0 +1,10 @@
+<taf>
+     <db>
+                dbhost = 127.0.0.1
+                dbname = db_taf
+                dbuser = pc
+                dbpass = pc@sn
+                dbport = 3306
+                charset = latin1
+     </db>
+</taf>

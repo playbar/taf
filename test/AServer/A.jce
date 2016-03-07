@@ -1,0 +1,10 @@
+
+module Test
+{
+
+interface A
+{
+    string test(long p, int i);
+};
+
+}; 

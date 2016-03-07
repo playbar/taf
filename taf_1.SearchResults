@@ -1,0 +1,20 @@
+---- it->second Matches (19 in 0 files) ----
+DbHandle.cpp (src\registry):        if (it != map_status.end() && it->second == static_cast<int>(vecStateInfo[i].serverState)) continue;
+DbHandle.cpp (src\registry):                return it->second;
+DbHandle.cpp (src\registry):            if(g_mServerGroupCache[it->first] == it->second)
+DbHandle.cpp (src\registry):            sValues = " when '" + it->first+ "' then " + TC_Common::tostr<int>(it->second) + " ";            
+DbHandle.cpp (src\registry):        return it->second.vActiveEndpoints;
+DbHandle.cpp (src\registry):        activeEp   = it->second.vActiveEndpoints;
+DbHandle.cpp (src\registry):        inactiveEp = it->second.vInactiveEndpoints;
+DbHandle.cpp (src\registry):        activeEp    = getEpsByGroupId(it->second.vActiveEndpoints, ENUM_USE_WORK_GROUPID, iClientGroupId, os);
+DbHandle.cpp (src\registry):        inactiveEp  = getEpsByGroupId(it->second.vInactiveEndpoints, ENUM_USE_WORK_GROUPID, iClientGroupId, os);
+DbHandle.cpp (src\registry):           activeEp    = getEpsByGroupId(it->second.vActiveEndpoints, ENUM_USE_WORK_GROUPID, -1, os);
+DbHandle.cpp (src\registry):           inactiveEp  = getEpsByGroupId(it->second.vInactiveEndpoints, ENUM_USE_WORK_GROUPID, -1, os);
+DbHandle.cpp (src\registry):            activeEp   = it->second.vActiveEndpoints;        
+DbHandle.cpp (src\registry):            inactiveEp = it->second.vInactiveEndpoints;
+DbHandle.cpp (src\registry):        if (it->second.setGroupID.count(iClientGroupID) == 0)
+DbHandle.cpp (src\registry):            os << "|(Not In Priority " << it->second.sGroupID << ")";
+DbHandle.cpp (src\registry):		vecActive	= getEpsByGroupId(itObject->second.vActiveEndpoints, ENUM_USE_WORK_GROUPID, it->second.setGroupID, os);
+DbHandle.cpp (src\registry):		vecInactive	= getEpsByGroupId(itObject->second.vInactiveEndpoints, ENUM_USE_WORK_GROUPID, it->second.setGroupID, os);
+DbHandle.cpp (src\registry):        os << "|(In Priority: " << it->second.sGroupID << " Active=" << vecActive.size() << " Inactive=" << vecInactive.size() << ")";
+DbHandle.cpp (src\registry):            item = it->second;

@@ -1,0 +1,16 @@
+
+module taf
+{
+    interface Log
+    {
+        /**
+	* 记录远程日志
+	* @param app, 应用名称
+	* @param server, 服务名称
+	* @param file, 文件名称
+	* @param format, 日志时间格式(%Y%m%d)
+	* @param buffer, 日志内容
+	*/
+        void logger(string app, string server, string file, string format, vector<string> buffer);
+    };
+};

@@ -1,0 +1,43 @@
+
+module taf
+{
+
+//属性上报消息包  Prop = property
+struct StatPropMsgHead
+{
+      0 require string moduleName;          //模块name
+      1 require string ip;                  //ip
+      2 require string propertyName;        //属性name
+};
+
+key[StatPropMsgHead, moduleName, ip, propertyName ];
+
+//属性值信息
+struct StatPropInfo
+{
+    0 require string policy;                //Sum\Avg\Distr\Count\Max\Min
+    1 require string value;                 //值
+};
+
+//属性上报包体
+struct StatPropMsgBody
+{
+     0 require vector<StatPropInfo> vInfo;  //上报信息
+};
+
+/**
+ *
+ * 上报服务的接口
+ *
+ **/
+interface PropertyF
+{
+      /**
+      * 上报属性统计信息   Prop = property
+      * @param statmsg,             上报信息
+      * @return int,                返回0表示成功
+      */
+      int reportPropMsg( map<StatPropMsgHead, StatPropMsgBody> statmsg );
+};
+
+};

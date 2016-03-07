@@ -1,0 +1,71 @@
+
+module taf
+{
+
+struct FileInfo
+{
+    /**
+    * 文件路径, 相对listFileInfo中path的路径
+    **/
+    0 require string path;
+
+    /**
+    * 文件大小, 字节数
+    **/
+    1 require int size;
+
+    /** 
+    * 文件是否可执行
+    */
+    2 require bool canExec;
+
+    /**
+    * 该文件的MD5值
+    */
+    3 optional string md5;
+};
+
+/**
+ *
+ * 发布服务的接口
+ *
+ **/
+interface Patch
+{
+    /**
+    * 获取路径下所有文件列表信息
+    * @param path, 目录路径, 路径中不能包含..
+    * @param vector<FileInfo>, 文件列表信息
+    * @return int, 返回0表示path是目录, 1表示path是文件, -1表示路径错误
+    */
+    int listFileInfo(string path, out vector<FileInfo> vf);
+
+    /**
+    * 下载文件
+    * @param file, 文件路径
+    * @param pos, 从什么位置开始下载
+    * @param vector<byte>, 文件内容
+    * @param int, 0:读取表示成功, 1:读取到文件末尾了, <0: 读取失败
+    */
+    int download(string file, int pos, out vector<byte> vb);
+
+
+    /**
+    * 获取路径下所有文件列表信息，不重组文件路径
+    * @param path, 目录路径, 路径中不能包含..
+    * @param vector<FileInfo>, 文件列表信息
+    * @return int, 返回0表示path是目录, 1表示path是文件, -1表示路径错误
+    */
+    int listFileInfoSubborn(string path, out vector<FileInfo> vf);
+
+    /**
+    * 下载文件
+    * @param file, 文件的绝对路径，不再重组文件路径
+    * @param pos, 从什么位置开始下载
+    * @param vector<byte>, 文件内容
+    * @param int, 0:读取表示成功, 1:读取到文件末尾了, <0: 读取失败
+    */
+    int downloadSubborn(string file, int pos, out vector<byte> vb);
+};
+
+}; 

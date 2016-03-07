@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/taf/tafnode/util
+END
+start.sh
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/taf/tafnode/util/start.sh
+END
+stop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/taf/tafnode/util/stop.sh
+END

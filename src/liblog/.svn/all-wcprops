@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/liblog
+END
+taf_logger.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/liblog/taf_logger.cpp
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/liblog/.cvsignore
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/liblog/Makefile
+END

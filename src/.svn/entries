@@ -1,0 +1,155 @@
+10
+
+dir
+19559
+https://tc-svn.tencent.com/mqq/mqq_wsrdplat_rep/Taf_proj/tags/Taf_Beta06_Build000_B002/src
+https://tc-svn.tencent.com/mqq/mqq_wsrdplat_rep
+
+
+
+2010-12-23T10:52:06.107778Z
+19412
+edwardsu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5442ac96-99f0-8744-b3b7-63c74a83e67f
+
+libhessian
+dir
+
+property
+dir
+
+hce2cpp
+dir
+
+libpatch
+dir
+
+jce2cpp
+dir
+
+jce2php
+dir
+
+libconfig
+dir
+
+patchclient
+dir
+
+patch
+dir
+
+jce2kjava
+dir
+
+libparse
+dir
+
+xmlproxy
+dir
+
+libutil
+dir
+
+notify
+dir
+
+liblog
+dir
+
+libservant
+dir
+
+Makefile
+file
+
+
+
+
+2010-12-27T06:30:34.000000Z
+0ba5023154932742d2e3ec2233073a96
+2010-03-04T03:11:59.386539Z
+5182
+skingfan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+780
+
+jce2symcpp
+dir
+
+log
+dir
+
+libnodeF
+dir
+
+node
+dir
+
+jce2arraycpp
+dir
+
+jce2java
+dir
+
+jce2c
+dir
+
+adminclient
+dir
+
+libnotify
+dir
+
+config
+dir
+
+xmltrans
+dir
+
+registry
+dir
+
+jce2cs
+dir
+
+stat
+dir
+
+wupproxy
+dir
+

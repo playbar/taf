@@ -1,0 +1,243 @@
+#include "../node/NodeDescriptor.jce"
+
+module taf
+{
+    struct ServerStateDesc
+    {
+        0 require string settingStateInReg;
+        1 require string presentStateInReg;
+        2 require string presentStateInNode;
+        3 require int processId;
+        4 require string patchVersion;
+        5 require string patchTime;
+        6 require string patchUser;
+    };
+
+    /**
+     * admin 管理接口
+     */
+    interface AdminReg
+    {
+        /***********application****************/
+
+        /**
+         * 获取application列表
+         *
+         * @param null
+         * @param out result : 结果描述
+         *
+         * @return application列表
+         */
+        vector<string> getAllApplicationNames(out string result);
+
+
+        /***********node****************/
+
+        /**
+         * 获取node列表
+         *
+         * @param null
+         * @param out result : 结果描述
+         *
+         * @return node 列表
+         */
+        vector<string> getAllNodeNames(out string result);
+
+        /**
+         * ping node
+         *
+         * @param name: node id
+         * @param out result : 结果描述
+         *
+         * @return : true-ping通；false-不通
+         */
+        bool pingNode(string name, out string result);
+
+        /**
+         * get node version
+         *
+         * @param name: node id
+         * @param out version ：版本
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int getNodeVesion(string name, out string version, out string result);
+
+        /**
+         * 停止 node
+         *
+         * @param name: node id
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int shutdownNode(string name, out string result);
+
+        /***********server****************/
+
+        /**
+         * 获取server列表
+         *
+         * @param name: null
+         * @param out result : 结果描述
+         *
+         * @return: server列表及相关信息
+         */
+        vector<vector<string> > getAllServerIds(out string result);
+
+        /**
+         * 获取特定server状态
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeNmae   : node id
+         * @param out state  : 状态
+         * @param out result : 结果描述
+         *
+         * @return : 处理结果
+         */
+        int getServerState(string application,string serverName, string nodeName, out ServerStateDesc state, out string result);
+
+        /**
+         * 获取某ip所属group 用于机房部署  例如某ip属于那个机房
+         *
+         * @param nodeNmae   : ip
+         * @param out int    : group id
+         * @param out result : 结果描述
+         *
+         * @return : 处理结果
+         */
+        int getGroupId(string ip, out int groupId, out string result);
+
+        /**
+         * 启动特定server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int startServer(string application,string serverName, string nodeName, out string result);
+
+        /**
+         * 停止特定server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int stopServer(string application,string serverName, string nodeName, out string result);
+
+        /**
+         * 重启特定server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int restartServer(string application,string serverName, string nodeName, out string result);
+
+
+        /**
+         * 通知server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param command    : 命令
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int notifyServer(string application,string serverName, string nodeName, string command, out string result);
+
+        /**
+         * 发布特定server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param shutdown   : 是否需要停止服务
+         * @param version    : patch的版本
+         * @param user       : 发布者
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int patchServer(string application, string serverName, string nodeName, bool shutdown,
+                        string version, string user, out string result);
+
+        /**
+         * 发布特定文件
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param sSrcFile   : patch服务器上的路径
+         * @param sDstFile   : node服务器上的目标路径
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int patchSubborn(string application, string serverName, string nodeName, string sSrcFile, string sDstFile, out string result);
+
+        /**
+        * 获取服务发布进度
+        * @param application  : 服务所属应用名
+        * @param serverName   : 服务名
+        * @param nodeName     : node id
+        * @out tPatchInfo     ：发布信息
+        *
+        * @return :0-成功 others-失败
+        */
+        int getPatchPercent(string application,string serverName,string nodeName,out PatchInfo tPatchInfo);
+
+
+        /**
+         * 加载特定server
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param out result : 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int loadServer(string application, string serverName, string nodeName, out string result);
+
+        /**
+         * 获取相应模板
+         *
+         * @param profileName: 模板名称
+         * @param out profileTemplate: 模板内容
+         * @param out resultDesc: 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int getProfileTemplate(string profileName , out string profileTemplate, out string resultDesc);
+
+        /**
+         * 获取服务相应模板
+         *
+         * @param application: 应用
+         * @param serverName : server名
+         * @param nodeName   : node id
+         * @param out profileTemplate: 模板内容
+         * @param out resultDesc: 结果描述
+         *
+         * @return : 0-成功 others-失败
+         */
+        int getServerProfileTemplate(string application, string serverName, string nodeName, out string profileTemplate, out string resultDesc);
+    };
+
+};
+

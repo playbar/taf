@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB
+END
+HelloImp.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/HelloImp.h
+END
+HelloServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/HelloServer.h
+END
+Hello.jce
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/Hello.jce
+END
+Hello.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/Hello.cpp
+END
+hello.conf
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/hello.conf
+END
+Hello.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/Hello.h
+END
+HelloServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/HelloServer.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/script/HelloServer/srcB/Makefile
+END

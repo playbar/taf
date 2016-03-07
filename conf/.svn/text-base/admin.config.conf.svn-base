@@ -1,0 +1,13 @@
+<taf>
+    <application>
+        <client>
+            locator            = taf.tafregistry.QueryObj@tcp -h 172.25.38.67 -p 17890
+            max-invoke-timeout = 50000
+        </client>
+        <server>
+            logpath  = /usr/local/app/one/app_log/
+            node=taf.tafnode1.NodeObj@tcp -h 172.25.38.67 -p 19385 -t 60000
+        </server>
+    </application>
+</taf>
+

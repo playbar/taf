@@ -1,0 +1,242 @@
+2009,12,28表结构修改记录
+
+1.t_config_files
+`config_flag` int(10) NOT NULL default '0',  
+
+2. t_machine
+
+-- Table structure for table `t_machine`
+--
+
+DROP TABLE IF EXISTS `t_machine`;
+CREATE TABLE `t_machine` (
+  `device_id` varchar(32) NOT NULL default '',
+  `inner_ip` varchar(32) NOT NULL default '',
+  `outer_ip` varchar(255) NOT NULL default '',
+  `state` varchar(32) NOT NULL default '',
+  `location` varchar(32) NOT NULL default '',
+  `department` varchar(32) NOT NULL default '',
+  `group_name` varchar(32) NOT NULL default '',
+  `product_name` varchar(64) NOT NULL default '',
+  `store_time` date NOT NULL default '1970-01-01',
+  `rack_time` date NOT NULL default '1970-01-01',
+  `main_charge_person` varchar(16) NOT NULL default '',
+  `backup_charge_person` varchar(16) NOT NULL default '',
+  `security_zone` varchar(32) NOT NULL default '',
+  `harddisk_raid` varchar(16) NOT NULL default '',
+  `is_virtual_machine` enum('y','n','') default '',
+  `module_name` varchar(128) NOT NULL default '',
+  `response_lever` varchar(32) NOT NULL default '',
+  `manual` varchar(255) NOT NULL default '',
+  `machine_type` varchar(32) NOT NULL default '',
+  `company_remark` varchar(200) NOT NULL default '',
+  `department_remark` varchar(200) NOT NULL default '',
+  `memory` int(11) NOT NULL default '0',
+  `full_inner_ip` varchar(255) NOT NULL default '',
+  `inner_ip_confirmed` enum('y','n') default 'n',
+  `last_update_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `is_to_sync` enum('y','n') default 'y',
+  `last_sync_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `access_point` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`device_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+3.t_machine_taf_info
+
+--
+-- Table structure for table `t_machine_taf_info`
+--
+  
+DROP TABLE IF EXISTS `t_machine_taf_info`;
+CREATE TABLE `t_machine_taf_info` (
+  `id` int(11) NOT NULL auto_increment,
+  `application` varchar(100) NOT NULL default '',
+  `server_name` varchar(100) NOT NULL default '',
+  `app_server_name` varchar(50) NOT NULL default '',
+  `node_name` varchar(50) NOT NULL default '',
+  `location` varchar(255) NOT NULL default '',
+  `machine_type` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`application`,`server_name`,`node_name`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+4.t_monitor_taf_info
+
+--
+-- Table structure for table `t_machine_taf_info`
+--
+  
+DROP TABLE IF EXISTS `t_machine_taf_info`;
+CREATE TABLE `t_machine_taf_info` (
+  `id` int(11) NOT NULL auto_increment,
+  `application` varchar(100) NOT NULL default '',
+  `server_name` varchar(100) NOT NULL default '',
+  `app_server_name` varchar(50) NOT NULL default '',
+  `node_name` varchar(50) NOT NULL default '',
+  `location` varchar(255) NOT NULL default '',
+  `machine_type` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`application`,`server_name`,`node_name`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+5.t_ping_fails
+
+--
+-- Table structure for table `t_ping_fails`
+--
+  
+DROP TABLE IF EXISTS `t_ping_fails`;
+CREATE TABLE `t_ping_fails` (
+  `id` int(11) NOT NULL auto_increment,
+  `server_name` varchar(90) NOT NULL default '',
+  `ping_fail_num` int(11) NOT NULL default '0',
+  `insert_date` varchar(20) NOT NULL default '',
+  PRIMARY KEY  (`server_name`,`insert_date`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+6.t_server_conf
+`bak_flag` int(11) NOT NULL default '0'
+`node_group` varchar(50) NOT NULL default '',
+
+
+7.t_server_group_relation
+
+--
+-- Table structure for table `t_server_group_relation`
+--
+  
+DROP TABLE IF EXISTS `t_server_group_relation`;
+CREATE TABLE `t_server_group_relation` (
+  `id` int(11) NOT NULL auto_increment,
+  `application` varchar(90) NOT NULL default '',
+  `server_group` varchar(50) default '',
+  `server_name` varchar(50) default '',
+  `create_time` datetime default NULL,
+  `creator` varchar(30) default '',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `application` (`application`,`server_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+8.t_server_notify_fails
+
+--
+-- Table structure for table `t_server_notify_fails`
+--
+  
+DROP TABLE IF EXISTS `t_server_notify_fails`;
+CREATE TABLE `t_server_notify_fails` (
+  `id` int(11) NOT NULL auto_increment,
+  `server_name` varchar(50) default '',
+  `node_name` varchar(255) default '',
+  `obj_name` varchar(255) default '',
+  `info` varchar(255) default '',
+  `fail_time` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+9.t_server_notify_log_fails
+
+--
+-- Table structure for table `t_server_notify_log_fails`
+--
+  
+DROP TABLE IF EXISTS `t_server_notify_log_fails`;
+CREATE TABLE `t_server_notify_log_fails` (
+  `id` int(11) NOT NULL auto_increment,
+  `server_name` varchar(50) default '',
+  `node_name` varchar(255) default '',
+  `obj_name` varchar(255) default '',
+  `info` varchar(255) default '',
+  `fail_time` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+
+
+10.t_server_notifys
+ `svn_version` varchar(255) default NULL
+
+
+
+11.t_server_patchs_log
+
+--
+-- Table structure for table `t_server_patchs_log`
+--
+  
+DROP TABLE IF EXISTS `t_server_patchs_log`;
+CREATE TABLE `t_server_patchs_log` ( 
+  `id` int(11) NOT NULL auto_increment,
+  `server` varchar(50) default '',
+  `node_ip` varchar(255) default '', 
+  `update_text` varchar(255) default '',
+  `svn_version` varchar(255) default '',
+  `result_flag` int(11) default '1',
+  `publish_type` enum('rollback','new_version') default 'new_version',
+  `publish_time` datetime default NULL,
+  `publish_user` varchar(30) default '',
+  `fail_result` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+12.t_server_ping_fails
+
+--
+-- Table structure for table `t_server_ping_fails`
+--
+  
+DROP TABLE IF EXISTS `t_server_ping_fails`;
+CREATE TABLE `t_server_ping_fails` ( 
+  `id` int(11) NOT NULL auto_increment,
+  `server_name` varchar(50) default '',
+  `node_name` varchar(255) default '',
+  `obj_name` varchar(255) default '',
+  `info` varchar(255) default '',
+  `fail_time` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+13.t_server_remark
+
+--
+-- Table structure for table `t_server_remark`
+--
+  
+DROP TABLE IF EXISTS `t_server_remark`;
+CREATE TABLE `t_server_remark` (
+  `id` int(11) NOT NULL auto_increment,
+  `application` varchar(128) default '',
+  `server_name` varchar(128) default '',
+  `file_name` varchar(128) default NULL,
+  `remark_content` longtext,
+  `posttime` datetime default NULL,
+  `lastuser` varchar(60) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `UNIQUE_IDX` (`application`,`server_name`,`file_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+
+
+14.t_server_remark_history
+
+--
+-- Table structure for table `t_server_remark_history`
+--
+  
+DROP TABLE IF EXISTS `t_server_remark_history`;
+CREATE TABLE `t_server_remark_history` (
+  `id` int(11) NOT NULL auto_increment,
+  `remark_id` int(11) NOT NULL default '0',
+  `application` varchar(128) default '',
+  `server_name` varchar(128) default '',
+  `file_name` varchar(128) default NULL,
+  `remark_content` longtext,
+  `posttime` datetime default NULL,
+  `lastuser` varchar(60) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;

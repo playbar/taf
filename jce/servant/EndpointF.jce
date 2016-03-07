@@ -1,0 +1,20 @@
+
+module taf
+{
+    /**
+     * ¶Ë¿ÚÐÅÏ¢
+     */
+    struct EndpointF
+    {
+        0 require string host;
+        1 require int port;
+        2 require int timeout;
+        3 require int istcp;
+        4 require int grid;
+        5 optional int groupworkid;
+        6 optional int grouprealid;
+    };
+    key[EndpointF, host, port, timeout, istcp, grid];
+};
+
+

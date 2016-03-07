@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem
+END
+jmem_hashmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_hashmap.h
+END
+jmem_rbtree.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_rbtree.h
+END
+jmem_queue.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_queue.h
+END
+jmem_hashmap_compact.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_hashmap_compact.h
+END
+jmem_multi_hashmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_multi_hashmap.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/Makefile
+END
+jmem_policy.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/include/jmem/jmem_policy.h
+END

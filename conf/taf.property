@@ -1,0 +1,12 @@
+<taf>
+    <db>
+        charset=latin1
+        dbhost=127.0.0.1
+        dbname=db_taf_stat
+        dbpass=pc@sn
+        dbport=3306
+        dbuser=pc
+    </db>
+    sql = CREATE TABLE `${TABLE}` (`stattime` datetime default NULL,`master_name` varchar(128) NOT NULL default '',`master_ip` varchar(16) default NULL,`property_name` varchar(100) default NULL,`policy` varchar(20) default NULL,`value` varchar(255) default NULL,KEY `IDX_MASTER_NAME` (`master_name`),KEY `IDX_MASTER_IP` (`master_ip`),KEY `IDX_TIME` (`stattime`)) ENGINE=MyISAM
+# DEFAULT CHARSET=gbk
+</taf>

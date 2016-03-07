@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant
+END
+ServantHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ServantHandle.cpp
+END
+AppProtocol.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/AppProtocol.cpp
+END
+BaseNotify.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/BaseNotify.cpp
+END
+StatReport.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/StatReport.cpp
+END
+ObjectProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ObjectProxy.cpp
+END
+ServantProxyFactory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ServantProxyFactory.cpp
+END
+BaseProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/BaseProxy.cpp
+END
+PropertyReport.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/PropertyReport.cpp
+END
+NotifyObserver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/NotifyObserver.cpp
+END
+StatF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/StatF.cpp
+END
+AdapterProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/AdapterProxy.cpp
+END
+Message.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Message.cpp
+END
+Transceiver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Transceiver.cpp
+END
+AdminServant.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/AdminServant.cpp
+END
+EndpointInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/EndpointInfo.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Makefile
+END
+.cvsignore
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/.cvsignore
+END
+AdminF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/AdminF.cpp
+END
+ObjectProxyFactory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ObjectProxyFactory.cpp
+END
+Communicator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Communicator.cpp
+END
+Global.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Global.cpp
+END
+TMReactor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/TMReactor.cpp
+END
+TransceiverHandle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/TransceiverHandle.cpp
+END
+Application.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Application.cpp
+END
+JceCurrent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/JceCurrent.cpp
+END
+QueryEndpoint.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/QueryEndpoint.cpp
+END
+FDReactor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/FDReactor.cpp
+END
+QueryF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/QueryF.cpp
+END
+ServantHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ServantHelper.cpp
+END
+Servant.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Servant.cpp
+END
+ServantProxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/ServantProxy.cpp
+END
+NetworkUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/NetworkUtil.cpp
+END
+AsyncProcThread.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/AsyncProcThread.cpp
+END
+PropertyF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/PropertyF.cpp
+END
+Connector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/mqq/mqq_wsrdplat_rep/!svn/ver/19420/Taf_proj/tags/Taf_Beta06_Build000_B002/src/libservant/Connector.cpp
+END

@@ -1,0 +1,19 @@
+<taf>
+    <db>
+        charset=latin1
+        dbhost=127.0.0.1
+        dbname=db_taf
+        dbpass=pc@sn
+        dbport=3306
+        dbuser=pc
+    </db>
+    <hash>
+        min_block=50
+        max_block=200
+        factor=1.5
+        file_path=notify.hmap
+        file_size=50M
+        max_page_num=30
+        max_page_size=20
+    </hash>
+</taf>
