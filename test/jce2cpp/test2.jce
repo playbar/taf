@@ -1,0 +1,9 @@
+#include "test.jce"
+
+module Test
+{
+     struct tt
+	 {
+	     0 require int i;
+	 };
+};

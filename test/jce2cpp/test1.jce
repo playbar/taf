@@ -1,0 +1,16 @@
+#include "test.jce"
+
+module TestEx
+{
+    struct TestInfoEx
+    {
+        1 require vector<Test::TestInfo> vt;
+    };
+
+    interface TestExA
+    {
+        void test(Test::TestInfo t);
+        void testETest(Test::TestInfo t, Test::ETest et);
+    };
+};
+

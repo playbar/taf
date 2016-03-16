@@ -1,0 +1,39 @@
+
+module Test
+{
+    enum ETest
+    {
+        E1,
+        E2,
+        E3
+    };
+
+    const int i = 5;
+    const string b = "abc";
+
+    struct TestInfo
+    {
+    	1  require  vector<string> vs;
+    	2  require  map<string, string> m;
+    	3  optional vector<map<string,string>> vm;
+    	4  require  map<vector<string>,vector<string>> mv;
+    	5  optional bool   b   = true;
+    	7  optional short  si  = 0;
+    	6  optional byte   by  = 0;
+    	8  optional int    ii  = 34;
+    	9  optional long   li  = 0;
+    	10 optional float  f   = 45.34f;
+    	11 optional double d   = 0;
+    	12 optional string s   = "a\"bc";
+        13 require  ETest t;
+    	14 optional map<int,string> mi;
+    };
+
+    interface TestA
+    {
+        void test(TestInfo t);
+        void testVoidOut(TestInfo t, out int i);
+        void testVoidOut2(TestInfo t, out int i, out string s);
+    };
+};
+
