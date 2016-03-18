@@ -82,6 +82,12 @@ public:
      */
     virtual int onDispatch(JceCurrentPtr current, vector<char> &buffer) { return -1; }
 
+
+	/*
+	socket关闭后，会回调该函数
+	*/
+	virtual int handleClose(JceCurrentPtr current, vector<char> &buffer){ return -1; }
+
 public:
     /**
      * 普通协议的请求，没有方法名，不需要Dispatch

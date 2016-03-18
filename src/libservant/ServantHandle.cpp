@@ -248,6 +248,28 @@ void ServantHandle::handleClose(const TC_EpollServer::tagRecvData &stRecvData)
 {
     LOG->info() << "[TAF]ServantHandle::handleClose,adapter:" << stRecvData.adapter->getName() 
                 << ",peer:" << stRecvData.ip << ":" << stRecvData.port << endl;
+
+	JceCurrentPtr current = createCurrent(stRecvData);
+	map<string, ServantPtr>::iterator sit = _servants.find(current->getServantName());
+
+	assert(sit != _servants.end());
+
+	vector<char> buffer;
+
+	try
+	{
+		//业务逻辑处理
+		sit->second->handleClose(current, buffer);
+	}
+	catch (exception &ex)
+	{
+		LOG->error() << "[TAF]ServantHandle::handleClose " << ex.what() << endl;
+	}
+	catch (...)
+	{
+		LOG->error() << "[TAF]ServantHandle::handleClose unknown error" << endl;
+	}
+
 }
 
 void ServantHandle::handleTimeout(const TC_EpollServer::tagRecvData &stRecvData)
