@@ -1,152 +1,0 @@
-10
-
-dir
-19559
-https://tc-svn.tencent.com/mqq/mqq_wsrdplat_rep/Taf_proj/tags/Taf_Beta06_Build000_B002/test
-https://tc-svn.tencent.com/mqq/mqq_wsrdplat_rep
-
-
-
-2010-12-10T06:05:26.349518Z
-18353
-jarodruan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5442ac96-99f0-8744-b3b7-63c74a83e67f
-
-property
-dir
-
-hce2cpp
-dir
-
-jce2cpp
-dir
-
-jmem
-dir
-
-simple
-dir
-
-HelloServer
-dir
-
-hessian
-dir
-
-coder
-dir
-
-TCServer
-dir
-
-xmlproxy
-dir
-
-notify
-dir
-
-Makefile
-file
-
-
-
-
-2010-12-27T06:28:31.000000Z
-4a391ce0df32063183af033d71680385
-2009-09-22T03:12:45.087315Z
-2877
-jarodruan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-555
-
-asyncHttp
-dir
-
-TestAddConfig
-dir
-
-TestClient
-dir
-
-log
-dir
-
-node
-dir
-
-jce2java
-dir
-
-trans
-dir
-
-admin
-dir
-
-TafCaseServer
-dir
-
-ping
-dir
-
-config
-dir
-
-TestServer
-dir
-
-AServer
-dir
-
-registry
-dir
-
-wup
-dir
-
-stat
-dir
-
-util
-dir
-
-TransServer
-dir
-
-client
-dir
-

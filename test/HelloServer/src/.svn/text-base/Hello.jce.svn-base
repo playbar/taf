@@ -1,7 +1,0 @@
-module Test
-{
-    interface Hello
-    {
-        int testHello(string s, out string r);
-    };
-};

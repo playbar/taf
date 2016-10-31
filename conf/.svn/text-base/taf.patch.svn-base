@@ -1,6 +1,0 @@
-<taf>
-    #发布目录
-    directory = /usr/local/app/patchs
-    #每次同步文件大小
-    size      = 1M
-</taf>  
